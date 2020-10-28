@@ -18,4 +18,5 @@ class DisjointACKTR(A2C):
     def __init__(self, env, state_dim, action_dim,
                  memory_capacity=10000, max_steps=None,
                  roll_out_n_steps=10,
-                 reward_gamma=0.99
+                 reward_gamma=0.99, reward_scale=1., done_penalty=None,
+                 act
