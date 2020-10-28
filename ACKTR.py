@@ -13,4 +13,6 @@ from common.utils import index_to_one_hot, entropy, to_tensor_var
 class DisjointACKTR(A2C):
     """
     An agent learned with ACKTR
-    Using disjoint actor and cri
+    Using disjoint actor and critic results in instability in training.
+    """
+    def __init__(self, env, state_dim
