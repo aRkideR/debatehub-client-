@@ -15,4 +15,6 @@ class DisjointACKTR(A2C):
     An agent learned with ACKTR
     Using disjoint actor and critic results in instability in training.
     """
-    def __init__(self, env, state_dim
+    def __init__(self, env, state_dim, action_dim,
+                 memory_capacity=10000, max_steps=None,
+              
