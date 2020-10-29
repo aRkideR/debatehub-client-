@@ -19,4 +19,5 @@ class DisjointACKTR(A2C):
                  memory_capacity=10000, max_steps=None,
                  roll_out_n_steps=10,
                  reward_gamma=0.99, reward_scale=1., done_penalty=None,
-                 act
+                 actor_hidden_size=32, critic_hidden_size=32,
+                 actor_output_act=nn.
