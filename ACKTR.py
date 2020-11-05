@@ -23,4 +23,5 @@ class DisjointACKTR(A2C):
                  actor_output_act=nn.functional.log_softmax, critic_loss="mse",
                  actor_lr=0.001, critic_lr=0.001, vf_fisher_coef=0.5,
                  optimizer_type="rmsprop", entropy_reg=0.01,
-                 max_grad_norm=0.5, batch_size=100
+                 max_grad_norm=0.5, batch_size=100, episodes_before_train=100,
+                 epsilon_start=0.9, epsilon_end=0.01, eps
