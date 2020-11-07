@@ -29,4 +29,6 @@ class DisjointACKTR(A2C):
         super(DisjointACKTR, self).__init__(env, state_dim, action_dim,
                  memory_capacity, max_steps, roll_out_n_steps,
                  reward_gamma, reward_scale, done_penalty,
-                 actor_hidden_size, critic_hidden_si
+                 actor_hidden_size, critic_hidden_size,
+                 actor_output_act, critic_loss,
+    
