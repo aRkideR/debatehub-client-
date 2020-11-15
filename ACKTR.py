@@ -35,4 +35,6 @@ class DisjointACKTR(A2C):
                  optimizer_type, entropy_reg,
                  max_grad_norm, batch_size, episodes_before_train,
                  epsilon_start, epsilon_end, epsilon_decay,
-                 use_c
+                 use_cuda)
+
+        self.actor_optimizer = KFACOptimizer(self.actor, lr=self.act
