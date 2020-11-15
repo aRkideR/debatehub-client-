@@ -33,4 +33,5 @@ class DisjointACKTR(A2C):
                  actor_output_act, critic_loss,
                  actor_lr, critic_lr,
                  optimizer_type, entropy_reg,
-      
+                 max_grad_norm, batch_size, episodes_before_train,
+  
