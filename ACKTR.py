@@ -34,4 +34,5 @@ class DisjointACKTR(A2C):
                  actor_lr, critic_lr,
                  optimizer_type, entropy_reg,
                  max_grad_norm, batch_size, episodes_before_train,
-  
+                 epsilon_start, epsilon_end, epsilon_decay,
+                 use_c
