@@ -37,4 +37,5 @@ class DisjointACKTR(A2C):
                  epsilon_start, epsilon_end, epsilon_decay,
                  use_cuda)
 
-        self.actor_optimizer = KFACOptimizer(self.actor, lr=self.act
+        self.actor_optimizer = KFACOptimizer(self.actor, lr=self.actor_lr)
+        self.critic_optimizer = KFACOptimizer(self.critic, 
