@@ -38,4 +38,7 @@ class DisjointACKTR(A2C):
                  use_cuda)
 
         self.actor_optimizer = KFACOptimizer(self.actor, lr=self.actor_lr)
-        self.critic_optimizer = KFACOptimizer(self.critic, 
+        self.critic_optimizer = KFACOptimizer(self.critic, lr=self.critic_lr)
+        self.vf_fisher_coef = vf_fisher_coef
+
+    # train on
