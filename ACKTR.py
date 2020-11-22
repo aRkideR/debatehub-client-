@@ -41,4 +41,6 @@ class DisjointACKTR(A2C):
         self.critic_optimizer = KFACOptimizer(self.critic, lr=self.critic_lr)
         self.vf_fisher_coef = vf_fisher_coef
 
-    # train on
+    # train on a roll out batch
+    def train(self):
+        if self.n_episodes <= self.episodes_be
