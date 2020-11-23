@@ -46,4 +46,5 @@ class DisjointACKTR(A2C):
         if self.n_episodes <= self.episodes_before_train:
             pass
 
-        batch = self.memory.sample(self.batc
+        batch = self.memory.sample(self.batch_size)
+        states_var = to_tensor_var(batch.state
