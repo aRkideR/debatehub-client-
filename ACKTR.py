@@ -55,4 +55,6 @@ class DisjointACKTR(A2C):
         # update actor network
         action_log_probs = self.actor(states_var)
         entropy_loss = th.mean(entropy(th.exp(action_log_probs)))
-        action_log_probs = th.sum(ac
+        action_log_probs = th.sum(action_log_probs * actions_var, 1)
+        # fisher loss
+        if 
