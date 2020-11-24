@@ -50,4 +50,6 @@ class DisjointACKTR(A2C):
         states_var = to_tensor_var(batch.states, self.use_cuda).view(-1, self.state_dim)
         one_hot_actions = index_to_one_hot(batch.actions, self.action_dim)
         actions_var = to_tensor_var(one_hot_actions, self.use_cuda).view(-1, self.action_dim)
-        rewards_var = to_t
+        rewards_var = to_tensor_var(batch.rewards, self.use_cuda).view(-1, 1)
+
+        # update actor
