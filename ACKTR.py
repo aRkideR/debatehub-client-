@@ -58,4 +58,5 @@ class DisjointACKTR(A2C):
         action_log_probs = th.sum(action_log_probs * actions_var, 1)
         # fisher loss
         if self.actor_optimizer.steps % self.actor_optimizer.Ts == 0:
-          
+            self.actor.zero_grad()
+            pg_fisher_loss = th.mean(action_l
