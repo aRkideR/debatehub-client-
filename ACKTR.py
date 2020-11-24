@@ -57,4 +57,5 @@ class DisjointACKTR(A2C):
         entropy_loss = th.mean(entropy(th.exp(action_log_probs)))
         action_log_probs = th.sum(action_log_probs * actions_var, 1)
         # fisher loss
-        if 
+        if self.actor_optimizer.steps % self.actor_optimizer.Ts == 0:
+          
