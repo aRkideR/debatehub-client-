@@ -62,4 +62,5 @@ class DisjointACKTR(A2C):
             pg_fisher_loss = th.mean(action_log_probs)
             self.actor_optimizer.acc_stats = True
             pg_fisher_loss.backward(retain_graph=True)
-            s
+            self.actor_optimizer.acc_stats = False
+        self.actor_optimizer.zero_grad(
