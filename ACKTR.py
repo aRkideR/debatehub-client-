@@ -66,4 +66,6 @@ class DisjointACKTR(A2C):
         self.actor_optimizer.zero_grad()
         # actor loss
         values = self.critic(states_var, actions_var).detach()
-        advantages = rewards_var - value
+        advantages = rewards_var - values
+        pg_loss = -th.mean(action_log_probs * advantages)
+        actor
