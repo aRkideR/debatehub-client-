@@ -65,4 +65,5 @@ class DisjointACKTR(A2C):
             self.actor_optimizer.acc_stats = False
         self.actor_optimizer.zero_grad()
         # actor loss
-        values = self.critic(stat
+        values = self.critic(states_var, actions_var).detach()
+        advantages = rewards_var - value
