@@ -71,4 +71,5 @@ class DisjointACKTR(A2C):
         actor_loss = pg_loss - entropy_loss * self.entropy_reg
         actor_loss.backward()
         if self.max_grad_norm is not None:
-            nn.utils.clip_grad_norm(sel
+            nn.utils.clip_grad_norm(self.actor.parameters(), self.max_grad_norm)
+        self.actor_optimizer.step
