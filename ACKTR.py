@@ -68,4 +68,5 @@ class DisjointACKTR(A2C):
         values = self.critic(states_var, actions_var).detach()
         advantages = rewards_var - values
         pg_loss = -th.mean(action_log_probs * advantages)
-        actor
+        actor_loss = pg_loss - entropy_loss * self.entropy_reg
+        actor_loss.b
