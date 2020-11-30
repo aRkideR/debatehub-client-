@@ -78,4 +78,5 @@ class DisjointACKTR(A2C):
         target_values = rewards_var
         values = self.critic(states_var, actions_var)
         # fisher loss
-        if self.critic_optimizer.
+        if self.critic_optimizer.steps % self.critic_optimizer.Ts == 0:
+            self.critic.zero_grad()
