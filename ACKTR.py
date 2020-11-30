@@ -76,4 +76,6 @@ class DisjointACKTR(A2C):
 
         # update critic network
         target_values = rewards_var
-        values = 
+        values = self.critic(states_var, actions_var)
+        # fisher loss
+        if self.critic_optimizer.
