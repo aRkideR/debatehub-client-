@@ -81,4 +81,5 @@ class DisjointACKTR(A2C):
         if self.critic_optimizer.steps % self.critic_optimizer.Ts == 0:
             self.critic.zero_grad()
             values_noise = to_tensor_var(np.random.randn(values.size()[0]), self.use_cuda)
-            sample_
+            sample_values = (values + values_noise.view(-1, 1)).detach()
+            if sel
