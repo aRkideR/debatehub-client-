@@ -86,4 +86,6 @@ class DisjointACKTR(A2C):
                 vf_fisher_loss = - self.vf_fisher_coef * nn.functional.smooth_l1_loss(values, sample_values)
             else:
                 vf_fisher_loss = - self.vf_fisher_coef * nn.MSELoss()(values, sample_values)
-            self.critic_optimizer.acc_sta
+            self.critic_optimizer.acc_stats = True
+            vf_fisher_loss.backward(retain_graph=True)
+         
