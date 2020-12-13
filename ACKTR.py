@@ -89,4 +89,6 @@ class DisjointACKTR(A2C):
             self.critic_optimizer.acc_stats = True
             vf_fisher_loss.backward(retain_graph=True)
             self.critic_optimizer.acc_stats = False
-        self.critic_opti
+        self.critic_optimizer.zero_grad()
+        # critic loss
+        if self.criti
