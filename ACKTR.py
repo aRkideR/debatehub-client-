@@ -91,4 +91,5 @@ class DisjointACKTR(A2C):
             self.critic_optimizer.acc_stats = False
         self.critic_optimizer.zero_grad()
         # critic loss
-        if self.criti
+        if self.critic_loss == "huber":
+            critic_loss = nn.functional.smooth_l
