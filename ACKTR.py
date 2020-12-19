@@ -100,4 +100,7 @@ class DisjointACKTR(A2C):
             nn.utils.clip_grad_norm(self.critic.parameters(), self.max_grad_norm)
         self.critic_optimizer.step()
 
-class Joi
+class JointACKTR(A2C):
+    """
+    An agent learned with ACKTR
+    Compared with Disjoint
