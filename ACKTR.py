@@ -97,4 +97,7 @@ class DisjointACKTR(A2C):
             critic_loss = nn.MSELoss()(values, target_values)
         critic_loss.backward()
         if self.max_grad_norm is not None:
-            nn.utils.clip_grad_norm(self.critic.parameters(),
+            nn.utils.clip_grad_norm(self.critic.parameters(), self.max_grad_norm)
+        self.critic_optimizer.step()
+
+class Joi
