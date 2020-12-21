@@ -103,4 +103,6 @@ class DisjointACKTR(A2C):
 class JointACKTR(A2C):
     """
     An agent learned with ACKTR
-    Compared with Disjoint
+    Compared with DisjointACKTR, JointACKTR is more stable.
+    """
+    def __init__(self, env, state_di
