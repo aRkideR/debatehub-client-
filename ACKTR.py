@@ -105,4 +105,6 @@ class JointACKTR(A2C):
     An agent learned with ACKTR
     Compared with DisjointACKTR, JointACKTR is more stable.
     """
-    def __init__(self, env, state_di
+    def __init__(self, env, state_dim, action_dim,
+                 memory_capacity=10000, max_steps=None,
+          
