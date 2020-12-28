@@ -112,4 +112,5 @@ class JointACKTR(A2C):
                  actor_hidden_size=32, critic_hidden_size=32,
                  actor_output_act=nn.functional.log_softmax, critic_loss="mse",
                  actor_lr=0.001, critic_lr=0.001, vf_coef=0.5, vf_fisher_coef=1.0,
-                 optimizer_type="rm
+                 optimizer_type="rmsprop", entropy_reg=0.01,
+                 max_grad_norm=
