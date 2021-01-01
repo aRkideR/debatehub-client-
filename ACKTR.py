@@ -117,4 +117,5 @@ class JointACKTR(A2C):
                  epsilon_start=0.9, epsilon_end=0.01, epsilon_decay=200,
                  use_cuda=True):
         super(JointACKTR, self).__init__(env, state_dim, action_dim,
-         
+                 memory_capacity, max_steps, roll_out_n_steps,
+                 reward_ga
