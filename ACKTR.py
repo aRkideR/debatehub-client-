@@ -118,4 +118,5 @@ class JointACKTR(A2C):
                  use_cuda=True):
         super(JointACKTR, self).__init__(env, state_dim, action_dim,
                  memory_capacity, max_steps, roll_out_n_steps,
-                 reward_ga
+                 reward_gamma, reward_scale, done_penalty,
+                 actor_hidden_size, critic_
