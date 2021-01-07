@@ -121,4 +121,5 @@ class JointACKTR(A2C):
                  reward_gamma, reward_scale, done_penalty,
                  actor_hidden_size, critic_hidden_size,
                  actor_output_act, critic_loss,
-  
+                 actor_lr, critic_lr,
+                 optimizer_type, entropy_re
