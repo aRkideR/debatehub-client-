@@ -127,4 +127,5 @@ class JointACKTR(A2C):
                  epsilon_start, epsilon_end, epsilon_decay,
                  use_cuda)
 
-        self.actor_critic = ActorCriticNetwork(self.state_dim, self.
+        self.actor_critic = ActorCriticNetwork(self.state_dim, self.action_dim,
+                                               min(self.acto
