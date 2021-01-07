@@ -125,4 +125,6 @@ class JointACKTR(A2C):
                  optimizer_type, entropy_reg,
                  max_grad_norm, batch_size, episodes_before_train,
                  epsilon_start, epsilon_end, epsilon_decay,
-                 use
+                 use_cuda)
+
+        self.actor_critic = ActorCriticNetwork(self.state_dim, self.
