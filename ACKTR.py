@@ -129,4 +129,5 @@ class JointACKTR(A2C):
 
         self.actor_critic = ActorCriticNetwork(self.state_dim, self.action_dim,
                                                min(self.actor_hidden_size, self.critic_hidden_size),
-                    
+                                               self.actor_output_act)
+        self.optimizer = KF
