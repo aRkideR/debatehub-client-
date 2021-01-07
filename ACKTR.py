@@ -128,4 +128,5 @@ class JointACKTR(A2C):
                  use_cuda)
 
         self.actor_critic = ActorCriticNetwork(self.state_dim, self.action_dim,
-                                               min(self.acto
+                                               min(self.actor_hidden_size, self.critic_hidden_size),
+                    
