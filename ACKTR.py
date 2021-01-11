@@ -132,4 +132,8 @@ class JointACKTR(A2C):
                                                self.actor_output_act)
         self.optimizer = KFACOptimizer(self.actor_critic, lr=min(self.actor_lr, self.critic_lr))
         self.vf_coef = vf_coef
-        self.vf_fisher_coef = vf_fish
+        self.vf_fisher_coef = vf_fisher_coef
+
+    # train on a roll out batch
+    def train(self):
+        
