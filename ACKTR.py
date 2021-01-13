@@ -139,4 +139,5 @@ class JointACKTR(A2C):
         if self.n_episodes <= self.episodes_before_train:
             pass
 
-        batch = 
+        batch = self.memory.sample(self.batch_size)
+        states_var = to_tensor_var(batch.stat
