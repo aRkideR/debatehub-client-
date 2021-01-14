@@ -147,4 +147,6 @@ class JointACKTR(A2C):
 
         # update actor network
         action_log_probs, values = self.actor_critic(states_var)
-        entropy_loss = th.mean(entropy(th.exp(action_log
+        entropy_loss = th.mean(entropy(th.exp(action_log_probs)))
+        action_log_probs = th.sum(action_log_probs * actions_var, 1)
+    
