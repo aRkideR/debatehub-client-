@@ -150,4 +150,6 @@ class JointACKTR(A2C):
         entropy_loss = th.mean(entropy(th.exp(action_log_probs)))
         action_log_probs = th.sum(action_log_probs * actions_var, 1)
         # fisher loss
-        if self.optimizer.steps % self.optimizer
+        if self.optimizer.steps % self.optimizer.Ts == 0:
+            self.actor_critic.zero_grad()
+            pg_fisher_loss
