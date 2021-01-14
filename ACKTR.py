@@ -146,4 +146,5 @@ class JointACKTR(A2C):
         rewards_var = to_tensor_var(batch.rewards, self.use_cuda).view(-1, 1)
 
         # update actor network
-        action_log_probs, values = self.actor_critic(s
+        action_log_probs, values = self.actor_critic(states_var)
+        entropy_loss = th.mean(entropy(th.exp(action_log
