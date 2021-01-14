@@ -140,4 +140,5 @@ class JointACKTR(A2C):
             pass
 
         batch = self.memory.sample(self.batch_size)
-        states_var = to_tensor_var(batch.stat
+        states_var = to_tensor_var(batch.states, self.use_cuda).view(-1, self.state_dim)
+        one_hot_actions = i
