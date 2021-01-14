@@ -145,4 +145,5 @@ class JointACKTR(A2C):
         actions_var = to_tensor_var(one_hot_actions, self.use_cuda).view(-1, self.action_dim)
         rewards_var = to_tensor_var(batch.rewards, self.use_cuda).view(-1, 1)
 
-   
+        # update actor network
+        action_log_probs, values = self.actor_critic(s
