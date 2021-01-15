@@ -152,4 +152,5 @@ class JointACKTR(A2C):
         # fisher loss
         if self.optimizer.steps % self.optimizer.Ts == 0:
             self.actor_critic.zero_grad()
-            pg_fisher_loss
+            pg_fisher_loss = th.mean(action_log_probs)
+            values_noise = to_tensor_var(np.ran
