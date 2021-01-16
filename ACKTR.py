@@ -154,4 +154,5 @@ class JointACKTR(A2C):
             self.actor_critic.zero_grad()
             pg_fisher_loss = th.mean(action_log_probs)
             values_noise = to_tensor_var(np.random.randn(values.size()[0]), self.use_cuda)
-            sample_values = (values + val
+            sample_values = (values + values_noise.view(-1, 1)).detach()
+            if self.critic_lo
