@@ -163,4 +163,6 @@ class JointACKTR(A2C):
             self.optimizer.acc_stats = True
             joint_fisher_loss.backward(retain_graph=True)
             self.optimizer.acc_stats = False
-        self.op
+        self.optimizer.zero_grad()
+        # actor loss
+        advantages = rewards_var - values.detach(
