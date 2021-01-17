@@ -159,4 +159,5 @@ class JointACKTR(A2C):
                 vf_fisher_loss = - nn.functional.smooth_l1_loss(values, sample_values)
             else:
                 vf_fisher_loss = - nn.MSELoss()(values, sample_values)
-           
+            joint_fisher_loss = pg_fisher_loss + self.vf_fisher_coef * vf_fisher_loss
+    
