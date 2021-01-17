@@ -158,4 +158,5 @@ class JointACKTR(A2C):
             if self.critic_loss == "huber":
                 vf_fisher_loss = - nn.functional.smooth_l1_loss(values, sample_values)
             else:
-                vf_fisher_loss = - n
+                vf_fisher_loss = - nn.MSELoss()(values, sample_values)
+           
