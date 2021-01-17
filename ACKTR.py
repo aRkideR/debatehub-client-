@@ -161,4 +161,6 @@ class JointACKTR(A2C):
                 vf_fisher_loss = - nn.MSELoss()(values, sample_values)
             joint_fisher_loss = pg_fisher_loss + self.vf_fisher_coef * vf_fisher_loss
             self.optimizer.acc_stats = True
-            joint_fisher_loss.backward(re
+            joint_fisher_loss.backward(retain_graph=True)
+            self.optimizer.acc_stats = False
+        self.op
