@@ -156,4 +156,6 @@ class JointACKTR(A2C):
             values_noise = to_tensor_var(np.random.randn(values.size()[0]), self.use_cuda)
             sample_values = (values + values_noise.view(-1, 1)).detach()
             if self.critic_loss == "huber":
-                vf_fisher_loss = - nn.functional.smooth_l1_lo
+                vf_fisher_loss = - nn.functional.smooth_l1_loss(values, sample_values)
+            else:
+                vf_fisher_loss = - n
