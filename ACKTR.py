@@ -165,4 +165,6 @@ class JointACKTR(A2C):
             self.optimizer.acc_stats = False
         self.optimizer.zero_grad()
         # actor loss
-        advantages = rewards_var - values.detach(
+        advantages = rewards_var - values.detach()
+        pg_loss = -th.mean(action_log_probs * advantages)
+        actor_loss = pg
