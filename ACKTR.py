@@ -167,4 +167,6 @@ class JointACKTR(A2C):
         # actor loss
         advantages = rewards_var - values.detach()
         pg_loss = -th.mean(action_log_probs * advantages)
-        actor_loss = pg
+        actor_loss = pg_loss - entropy_loss * self.entropy_reg
+        # critic loss
+        targe
