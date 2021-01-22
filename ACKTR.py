@@ -172,4 +172,6 @@ class JointACKTR(A2C):
         target_values = rewards_var
         if self.critic_loss == "huber":
             critic_loss = nn.functional.smooth_l1_loss(values, target_values)
-        els
+        else:
+            critic_loss = nn.MSELoss()(values, target_values)
+        
