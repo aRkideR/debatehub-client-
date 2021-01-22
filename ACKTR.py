@@ -179,3 +179,6 @@ class JointACKTR(A2C):
         if self.max_grad_norm is not None:
             nn.utils.clip_grad_norm(self.actor_critic.parameters(), self.max_grad_norm)
         self.optimizer.step()
+
+    # predict softmax action based on state
+    def _softmax_action(self, state):
