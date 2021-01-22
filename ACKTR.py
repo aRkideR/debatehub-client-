@@ -177,4 +177,5 @@ class JointACKTR(A2C):
         loss = actor_loss + critic_loss
         loss.backward()
         if self.max_grad_norm is not None:
-            nn.utils.clip_grad_norm(self.actor_
+            nn.utils.clip_grad_norm(self.actor_critic.parameters(), self.max_grad_norm)
+        self.optimizer.step()
