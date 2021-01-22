@@ -171,4 +171,5 @@ class JointACKTR(A2C):
         # critic loss
         target_values = rewards_var
         if self.critic_loss == "huber":
-            critic_
+            critic_loss = nn.functional.smooth_l1_loss(values, target_values)
+        els
