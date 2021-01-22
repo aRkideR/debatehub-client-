@@ -174,4 +174,6 @@ class JointACKTR(A2C):
             critic_loss = nn.functional.smooth_l1_loss(values, target_values)
         else:
             critic_loss = nn.MSELoss()(values, target_values)
-        
+        loss = actor_loss + critic_loss
+        loss.backward()
+        if self.
