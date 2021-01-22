@@ -176,4 +176,5 @@ class JointACKTR(A2C):
             critic_loss = nn.MSELoss()(values, target_values)
         loss = actor_loss + critic_loss
         loss.backward()
-        if self.
+        if self.max_grad_norm is not None:
+            nn.utils.clip_grad_norm(self.actor_
