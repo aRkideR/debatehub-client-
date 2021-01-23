@@ -192,4 +192,5 @@ class JointACKTR(A2C):
 
     # evaluate value for a state-action pair
     def value(self, state, action):
-      
+        state_var = to_tensor_var([state], self.use_cuda)
+        value_var = 
