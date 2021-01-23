@@ -185,4 +185,6 @@ class JointACKTR(A2C):
         state_var = to_tensor_var([state], self.use_cuda)
         softmax_action_var = th.exp(self.actor_critic(state_var)[0])
         if self.use_cuda:
-            softmax_action = softmax_a
+            softmax_action = softmax_action_var.data.cpu().numpy()[0]
+        else:
+            softmax_action 
