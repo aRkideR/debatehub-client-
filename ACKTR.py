@@ -190,4 +190,6 @@ class JointACKTR(A2C):
             softmax_action = softmax_action_var.data.numpy()[0]
         return softmax_action
 
-    # e
+    # evaluate value for a state-action pair
+    def value(self, state, action):
+      
