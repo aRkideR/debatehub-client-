@@ -183,4 +183,6 @@ class JointACKTR(A2C):
     # predict softmax action based on state
     def _softmax_action(self, state):
         state_var = to_tensor_var([state], self.use_cuda)
-        softmax_action_var = th.exp(self.actor_critic(state_var)[0
+        softmax_action_var = th.exp(self.actor_critic(state_var)[0])
+        if self.use_cuda:
+            softmax_action = softmax_a
