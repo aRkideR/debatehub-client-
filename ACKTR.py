@@ -195,4 +195,6 @@ class JointACKTR(A2C):
         state_var = to_tensor_var([state], self.use_cuda)
         value_var = self.actor_critic(state_var)[1]
         if self.use_cuda:
-            
+            value = value_var.data.cpu().numpy()[0]
+        else:
+            value
