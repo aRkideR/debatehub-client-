@@ -197,4 +197,5 @@ class JointACKTR(A2C):
         if self.use_cuda:
             value = value_var.data.cpu().numpy()[0]
         else:
-            value
+            value = value_var.data.numpy()[0]
+        return value
