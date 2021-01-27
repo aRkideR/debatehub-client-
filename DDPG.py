@@ -29,3 +29,73 @@ class DDPG(Agent):
                  max_grad_norm=0.5, batch_size=100, episodes_before_train=100,
                  epsilon_start=0.9, epsilon_end=0.01, epsilon_decay=200,
                  use_cuda=True):
+        super(DDPG, self).__init__(env, state_dim, action_dim,
+                 memory_capacity, max_steps,
+                 reward_gamma, reward_scale, done_penalty,
+                 actor_hidden_size, critic_hidden_size,
+                 actor_output_act, critic_loss,
+                 actor_lr, critic_lr,
+                 optimizer_type, entropy_reg,
+                 max_grad_norm, batch_size, episodes_before_train,
+                 epsilon_start, epsilon_end, epsilon_decay,
+                 use_cuda)
+
+        self.target_tau = target_tau
+        self.target_update_steps = target_update_steps
+
+        self.actor = ActorNetwork(self.state_dim, self.actor_hidden_size, self.action_dim, self.actor_output_act)
+        self.critic = CriticNetwork(self.state_dim, self.action_dim, self.critic_hidden_size, 1)
+        # to ensure target network and learning network has the same weights
+        self.actor_target = deepcopy(self.actor)
+        self.critic_target = deepcopy(self.critic)
+
+        if self.optimizer_type == "adam":
+            self.actor_optimizer = Adam(self.actor.parameters(), lr=self.actor_lr)
+            self.critic_optimizer = Adam(self.critic.parameters(), lr=self.critic_lr)
+        elif self.optimizer_type == "rmsprop":
+            self.actor_optimizer = RMSprop(self.actor.parameters(), lr=self.actor_lr)
+            self.critic_optimizer = RMSprop(self.critic.parameters(), lr=self.critic_lr)
+
+        if self.use_cuda:
+            self.actor.cuda()
+            self.critic.cuda()
+            self.actor_target.cuda()
+            self.critic_target.cuda()
+
+    # agent interact with the environment to collect experience
+    def interact(self):
+        super(DDPG, self)._take_one_step()
+
+    # train on a sample batch
+    def train(self):
+        # do not train until exploration is enough
+        if self.n_episodes <= self.episodes_before_train:
+            pass
+
+        batch = self.memory.sample(self.batch_size)
+        state_var = to_tensor_var(batch.states, self.use_cuda).view(-1, self.state_dim)
+        action_var = to_tensor_var(batch.actions, self.use_cuda).view(-1, self.action_dim)
+        reward_var = to_tensor_var(batch.rewards, self.use_cuda).view(-1, 1)
+        next_state_var = to_tensor_var(batch.next_states, self.use_cuda).view(-1, self.state_dim)
+        done_var = to_tensor_var(batch.dones, self.use_cuda).view(-1, 1)
+
+        # estimate the target q with actor_target network and critic_target network
+        next_action_var = self.actor_target(next_state_var)
+        next_q = self.critic_target(next_state_var, next_action_var).detach()
+        target_q = self.reward_scale * reward_var + self.reward_gamma * next_q * (1. - done_var)
+
+        # update critic network
+        self.critic_optimizer.zero_grad()
+        # current Q values
+        current_q = self.critic(state_var, action_var)
+        # rewards is target Q values
+        if self.critic_loss == "huber":
+            critic_loss = nn.functional.smooth_l1_loss(current_q, target_q)
+        else:
+            critic_loss = nn.MSELoss()(current_q, target_q)
+        critic_loss.backward()
+        if self.max_grad_norm is not None:
+            nn.utils.clip_grad_norm(self.critic.parameters(), self.max_grad_norm)
+        self.critic_optimizer.step()
+
+        # update actor network
