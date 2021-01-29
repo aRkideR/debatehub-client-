@@ -99,3 +99,37 @@ class DDPG(Agent):
         self.critic_optimizer.step()
 
         # update actor network
+        self.actor_optimizer.zero_grad()
+        # the accurate action prediction
+        action = self.actor(state_var)
+        # actor_loss is used to maximize the Q value for the predicted action
+        actor_loss = - self.critic(state_var, action)
+        actor_loss = actor_loss.mean()
+        actor_loss.backward()
+        if self.max_grad_norm is not None:
+            nn.utils.clip_grad_norm(self.actor.parameters(), self.max_grad_norm)
+        self.actor_optimizer.step()
+
+        # update actor target network and critic target network
+        if self.n_steps % self.target_update_steps == 0 and self.n_steps > 0:
+            super(DDPG, self)._soft_update_target(self.critic_target, self.critic)
+            super(DDPG, self)._soft_update_target(self.actor_target, self.actor)
+
+    # choose an action based on state with random noise added for exploration in training
+    def exploration_action(self, state):
+        action = self.action(state)
+        epsilon = self.epsilon_end + (self.epsilon_start - self.epsilon_end) * \
+                                  np.exp(-1. * self.n_steps / self.epsilon_decay)
+        # add noise
+        noise = np.random.randn(self.action_dim) * epsilon
+        action += noise
+        return action
+
+    # choose an action based on state for execution
+    def action(self, state):
+        action_var = self.actor(to_tensor_var([state], self.use_cuda))
+        if self.use_cuda:
+            action = action_var.data.cpu().numpy()[0]
+        else:
+            action = action_var.data.numpy()[0]
+        return action
