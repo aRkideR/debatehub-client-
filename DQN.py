@@ -7,4 +7,9 @@ import numpy as np
 
 from common.Agent import Agent
 from common.Model import ActorNetwork
-from common.uti
+from common.utils import identity, to_tensor_var
+
+
+class DQN(Agent):
+    """
+    An 
