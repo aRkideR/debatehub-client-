@@ -12,4 +12,5 @@ from common.utils import identity, to_tensor_var
 
 class DQN(Agent):
     """
-    An 
+    An agent learned with DQN using replay memory and temporal difference
+    - use a value netw
