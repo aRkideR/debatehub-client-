@@ -13,4 +13,6 @@ from common.utils import identity, to_tensor_var
 class DQN(Agent):
     """
     An agent learned with DQN using replay memory and temporal difference
-    - use a value netw
+    - use a value network to estimate the state-action value
+    """
+    def __init__(se
