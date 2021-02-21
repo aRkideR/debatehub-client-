@@ -16,4 +16,5 @@ class DQN(Agent):
     - use a value network to estimate the state-action value
     """
     def __init__(self, env, state_dim, action_dim,
-                 memory_ca
+                 memory_capacity=10000, max_steps=10000,
+                 reward_gamma=0.99, reward_scale=1.,
