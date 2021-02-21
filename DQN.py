@@ -17,4 +17,5 @@ class DQN(Agent):
     """
     def __init__(self, env, state_dim, action_dim,
                  memory_capacity=10000, max_steps=10000,
-                 reward_gamma=0.99, reward_scale=1.,
+                 reward_gamma=0.99, reward_scale=1., done_penalty=None,
+                 actor_hidden_size=32, critic_h
