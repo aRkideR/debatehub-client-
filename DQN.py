@@ -29,4 +29,6 @@ class DQN(Agent):
                  memory_capacity, max_steps,
                  reward_gamma, reward_scale, done_penalty,
                  actor_hidden_size, critic_hidden_size,
-                 actor_outp
+                 actor_output_act, critic_loss,
+                 actor_lr, critic_lr,
+                
