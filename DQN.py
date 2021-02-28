@@ -28,4 +28,5 @@ class DQN(Agent):
         super(DQN, self).__init__(env, state_dim, action_dim,
                  memory_capacity, max_steps,
                  reward_gamma, reward_scale, done_penalty,
-    
+                 actor_hidden_size, critic_hidden_size,
+                 actor_outp
