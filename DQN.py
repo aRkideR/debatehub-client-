@@ -31,4 +31,5 @@ class DQN(Agent):
                  actor_hidden_size, critic_hidden_size,
                  actor_output_act, critic_loss,
                  actor_lr, critic_lr,
-                
+                 optimizer_type, entropy_reg,
+                 max_grad_norm, batch_size
