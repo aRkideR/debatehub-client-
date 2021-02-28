@@ -26,4 +26,6 @@ class DQN(Agent):
                  epsilon_start=0.9, epsilon_end=0.01, epsilon_decay=200,
                  use_cuda=True):
         super(DQN, self).__init__(env, state_dim, action_dim,
-                 memory_capacity, max_step
+                 memory_capacity, max_steps,
+                 reward_gamma, reward_scale, done_penalty,
+    
