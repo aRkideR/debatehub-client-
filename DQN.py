@@ -32,4 +32,5 @@ class DQN(Agent):
                  actor_output_act, critic_loss,
                  actor_lr, critic_lr,
                  optimizer_type, entropy_reg,
-                 max_grad_norm, batch_size
+                 max_grad_norm, batch_size, episodes_before_train,
+                 epsilon_start, epsilon_end, epsilon_
