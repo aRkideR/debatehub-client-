@@ -36,4 +36,5 @@ class DQN(Agent):
                  epsilon_start, epsilon_end, epsilon_decay,
                  use_cuda)
 
-        self.actor = ActorNetwork(self.stat
+        self.actor = ActorNetwork(self.state_dim, self.actor_hidden_size,
+                                   
