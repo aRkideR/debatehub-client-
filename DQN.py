@@ -39,4 +39,6 @@ class DQN(Agent):
         self.actor = ActorNetwork(self.state_dim, self.actor_hidden_size,
                                           self.action_dim, self.actor_output_act)
         if self.optimizer_type == "adam":
-            self.actor_optimizer = Adam(self.actor.parameter
+            self.actor_optimizer = Adam(self.actor.parameters(), lr=self.actor_lr)
+        elif self.optimizer_type == "rmsprop":
+            
