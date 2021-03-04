@@ -42,4 +42,7 @@ class DQN(Agent):
             self.actor_optimizer = Adam(self.actor.parameters(), lr=self.actor_lr)
         elif self.optimizer_type == "rmsprop":
             self.actor_optimizer = RMSprop(self.actor.parameters(), lr=self.actor_lr)
-        if self.us
+        if self.use_cuda:
+            self.actor.cuda()
+
+    # agent interact with
