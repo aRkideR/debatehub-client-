@@ -45,4 +45,6 @@ class DQN(Agent):
         if self.use_cuda:
             self.actor.cuda()
 
-    # agent interact with
+    # agent interact with the environment to collect experience
+    def interact(self):
+        super(DQ
