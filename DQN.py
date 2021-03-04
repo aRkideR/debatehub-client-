@@ -47,4 +47,7 @@ class DQN(Agent):
 
     # agent interact with the environment to collect experience
     def interact(self):
-        super(DQ
+        super(DQN, self)._take_one_step()
+
+    # train on a sample batch
+    def trai
