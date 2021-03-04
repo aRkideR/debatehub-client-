@@ -41,4 +41,5 @@ class DQN(Agent):
         if self.optimizer_type == "adam":
             self.actor_optimizer = Adam(self.actor.parameters(), lr=self.actor_lr)
         elif self.optimizer_type == "rmsprop":
-            
+            self.actor_optimizer = RMSprop(self.actor.parameters(), lr=self.actor_lr)
+        if self.us
