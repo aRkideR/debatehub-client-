@@ -50,4 +50,8 @@ class DQN(Agent):
         super(DQN, self)._take_one_step()
 
     # train on a sample batch
-    def trai
+    def train(self):
+        if self.n_episodes <= self.episodes_before_train:
+            pass
+
+   
