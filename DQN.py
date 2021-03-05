@@ -54,4 +54,5 @@ class DQN(Agent):
         if self.n_episodes <= self.episodes_before_train:
             pass
 
-   
+        batch = self.memory.sample(self.batch_size)
+        states_var = t
