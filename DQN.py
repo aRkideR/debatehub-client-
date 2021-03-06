@@ -55,4 +55,4 @@ class DQN(Agent):
             pass
 
         batch = self.memory.sample(self.batch_size)
-        states_var = t
+        states_var = to_tensor_var(batch.states, self.use_cuda).view(-1, self.state_
