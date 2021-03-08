@@ -58,4 +58,5 @@ class DQN(Agent):
         states_var = to_tensor_var(batch.states, self.use_cuda).view(-1, self.state_dim)
         actions_var = to_tensor_var(batch.actions, self.use_cuda, "long").view(-1, 1)
         rewards_var = to_tensor_var(batch.rewards, self.use_cuda).view(-1, 1)
-        next_states_var = to_tensor_var
+        next_states_var = to_tensor_var(batch.next_states, self.use_cuda).view(-1, self.state_dim)
+        dones_var = to_tensor
