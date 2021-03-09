@@ -61,4 +61,5 @@ class DQN(Agent):
         next_states_var = to_tensor_var(batch.next_states, self.use_cuda).view(-1, self.state_dim)
         dones_var = to_tensor_var(batch.dones, self.use_cuda).view(-1, 1)
 
-        # compute 
+        # compute Q(s_t, a) - the model computes Q(s_t), then we select the
+        # columns of ac
