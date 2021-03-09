@@ -62,4 +62,5 @@ class DQN(Agent):
         dones_var = to_tensor_var(batch.dones, self.use_cuda).view(-1, 1)
 
         # compute Q(s_t, a) - the model computes Q(s_t), then we select the
-        # columns of ac
+        # columns of actions taken
+        current_q = self.actor(states_var).gather(1,
