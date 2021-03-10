@@ -63,4 +63,6 @@ class DQN(Agent):
 
         # compute Q(s_t, a) - the model computes Q(s_t), then we select the
         # columns of actions taken
-        current_q = self.actor(states_var).gather(1,
+        current_q = self.actor(states_var).gather(1, actions_var)
+
+        # compute V(s_{t+1}) for all next states and all
