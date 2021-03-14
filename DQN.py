@@ -65,4 +65,6 @@ class DQN(Agent):
         # columns of actions taken
         current_q = self.actor(states_var).gather(1, actions_var)
 
-        # compute V(s_{t+1}) for all next states and all
+        # compute V(s_{t+1}) for all next states and all actions,
+        # and we then take max_a { V(s_{t+1}) }
+ 
