@@ -69,4 +69,5 @@ class DQN(Agent):
         # and we then take max_a { V(s_{t+1}) }
         next_state_action_values = self.actor(next_states_var).detach()
         next_q = th.max(next_state_action_values, 1)[0].view(-1, 1)
-     
+        # compute target q by: r + gamma * max_a { V(s_{t+1}) }
+        ta
