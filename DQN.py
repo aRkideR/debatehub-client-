@@ -75,4 +75,5 @@ class DQN(Agent):
         # update value network
         self.actor_optimizer.zero_grad()
         if self.critic_loss == "huber":
-    
+            loss = th.nn.functional.smooth_l1_loss(current_q, target_q)
+        else:
