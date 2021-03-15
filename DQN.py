@@ -70,4 +70,4 @@ class DQN(Agent):
         next_state_action_values = self.actor(next_states_var).detach()
         next_q = th.max(next_state_action_values, 1)[0].view(-1, 1)
         # compute target q by: r + gamma * max_a { V(s_{t+1}) }
-        ta
+        target_q = self.reward_scale * rewards_var + self.reward_gamma * next
