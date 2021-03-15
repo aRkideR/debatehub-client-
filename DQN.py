@@ -67,4 +67,4 @@ class DQN(Agent):
 
         # compute V(s_{t+1}) for all next states and all actions,
         # and we then take max_a { V(s_{t+1}) }
- 
+        next_state_action_values = self.actor(next_states_var).detach()
