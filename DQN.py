@@ -73,4 +73,6 @@ class DQN(Agent):
         target_q = self.reward_scale * rewards_var + self.reward_gamma * next_q * (1. - dones_var)
 
         # update value network
-        self.
+        self.actor_optimizer.zero_grad()
+        if self.critic_loss == "huber":
+    
