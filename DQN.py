@@ -78,4 +78,6 @@ class DQN(Agent):
             loss = th.nn.functional.smooth_l1_loss(current_q, target_q)
         else:
             loss = th.nn.MSELoss()(current_q, target_q)
-        loss.b
+        loss.backward()
+        if self.max_grad_norm is not None:
+            nn.utils.clip_grad
