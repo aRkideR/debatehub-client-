@@ -80,4 +80,5 @@ class DQN(Agent):
             loss = th.nn.MSELoss()(current_q, target_q)
         loss.backward()
         if self.max_grad_norm is not None:
-            nn.utils.clip_grad
+            nn.utils.clip_grad_norm(self.actor.parameters(), self.max_grad_norm)
+        self.actor_optimizer.ste
