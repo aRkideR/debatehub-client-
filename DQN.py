@@ -90,4 +90,7 @@ class DQN(Agent):
         if np.random.rand() < epsilon:
             action = np.random.choice(self.action_dim)
         else:
-            action = self.ac
+            action = self.action(state)
+        return action
+
+    # choose an action based on sta
