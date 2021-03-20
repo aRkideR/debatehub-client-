@@ -83,4 +83,6 @@ class DQN(Agent):
             nn.utils.clip_grad_norm(self.actor.parameters(), self.max_grad_norm)
         self.actor_optimizer.step()
 
-    # choose an action based on state with random noise added for 
+    # choose an action based on state with random noise added for exploration in training
+    def exploration_action(self, state):
+        eps
