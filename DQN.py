@@ -81,4 +81,6 @@ class DQN(Agent):
         loss.backward()
         if self.max_grad_norm is not None:
             nn.utils.clip_grad_norm(self.actor.parameters(), self.max_grad_norm)
-        self.actor_optimizer.ste
+        self.actor_optimizer.step()
+
+    # choose an action based on state with random noise added for 
