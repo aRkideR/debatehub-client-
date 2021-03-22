@@ -95,4 +95,5 @@ class DQN(Agent):
 
     # choose an action based on state for execution
     def action(self, state):
-        state_var = to_
+        state_var = to_tensor_var([state], self.use_cuda)
+        state_action_value_var = self.actor(state_var
