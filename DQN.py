@@ -93,4 +93,6 @@ class DQN(Agent):
             action = self.action(state)
         return action
 
-    # choose an action based on sta
+    # choose an action based on state for execution
+    def action(self, state):
+        state_var = to_
