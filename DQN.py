@@ -98,4 +98,6 @@ class DQN(Agent):
         state_var = to_tensor_var([state], self.use_cuda)
         state_action_value_var = self.actor(state_var)
         if self.use_cuda:
-            state_action_value = 
+            state_action_value = state_action_value_var.data.cpu().numpy()[0]
+        else:
+            state_actio
