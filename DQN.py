@@ -100,4 +100,5 @@ class DQN(Agent):
         if self.use_cuda:
             state_action_value = state_action_value_var.data.cpu().numpy()[0]
         else:
-            state_actio
+            state_action_value = state_action_value_var.data.numpy()[0]
+        action
