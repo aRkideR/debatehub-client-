@@ -101,4 +101,5 @@ class DQN(Agent):
             state_action_value = state_action_value_var.data.cpu().numpy()[0]
         else:
             state_action_value = state_action_value_var.data.numpy()[0]
-        action
+        action = np.argmax(state_action_value)
+        return action
