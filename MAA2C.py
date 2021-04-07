@@ -12,4 +12,5 @@ from common.utils import entropy, index_to_one_hot, to_tensor_var
 
 class MAA2C(Agent):
     """
-    A
+    An multi-agent learned with Advantage Actor-Critic
+    - Actor takes its 
