@@ -14,4 +14,5 @@ class MAA2C(Agent):
     """
     An multi-agent learned with Advantage Actor-Critic
     - Actor takes its local observations as input
-    - agent interact wi
+    - agent interact with environment to collect experience
+    - agent train
