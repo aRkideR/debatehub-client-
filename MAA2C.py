@@ -18,4 +18,6 @@ class MAA2C(Agent):
     - agent training with experience to update policy
 
     Parameters
-    - training
+    - training_strategy:
+        - cocurrent
+            - each agent learns its own indiv
