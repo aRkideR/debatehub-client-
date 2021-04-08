@@ -21,4 +21,6 @@ class MAA2C(Agent):
     - training_strategy:
         - cocurrent
             - each agent learns its own individual policy which is independent
-            - multiple policies are optimize
+            - multiple policies are optimized simultaneously
+        - centralized (see MADDPG in [1] for details)
+           
