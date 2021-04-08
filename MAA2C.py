@@ -23,4 +23,5 @@ class MAA2C(Agent):
             - each agent learns its own individual policy which is independent
             - multiple policies are optimized simultaneously
         - centralized (see MADDPG in [1] for details)
-           
+            - centralized training and decentralized execution
+            - decent
