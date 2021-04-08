@@ -20,4 +20,5 @@ class MAA2C(Agent):
     Parameters
     - training_strategy:
         - cocurrent
-            - each agent learns its own indiv
+            - each agent learns its own individual policy which is independent
+            - multiple policies are optimize
