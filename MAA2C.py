@@ -24,4 +24,4 @@ class MAA2C(Agent):
             - multiple policies are optimized simultaneously
         - centralized (see MADDPG in [1] for details)
             - centralized training and decentralized execution
-            - decent
+            - decentralized actor map it's local observations to action using individual 
