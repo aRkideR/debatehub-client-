@@ -25,4 +25,5 @@ class MAA2C(Agent):
         - centralized (see MADDPG in [1] for details)
             - centralized training and decentralized execution
             - decentralized actor map it's local observations to action using individual policy
-            - centralized critic takes both state and action from all a
+            - centralized critic takes both state and action from all agents as input, each actor
+                has its own critic f
