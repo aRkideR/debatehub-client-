@@ -26,4 +26,5 @@ class MAA2C(Agent):
             - centralized training and decentralized execution
             - decentralized actor map it's local observations to action using individual policy
             - centralized critic takes both state and action from all agents as input, each actor
-                has its own critic for estimating the value function, which allows each actor ha
+                has its own critic for estimating the value function, which allows each actor has
+                different reward structure, e.g., cooperative, competitive, mix
