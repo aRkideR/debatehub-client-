@@ -27,4 +27,6 @@ class MAA2C(Agent):
             - decentralized actor map it's local observations to action using individual policy
             - centralized critic takes both state and action from all agents as input, each actor
                 has its own critic for estimating the value function, which allows each actor has
-                different reward structure, e.g., cooperative, competitive, mix
+                different reward structure, e.g., cooperative, competitive, mixed task
+    - actor_parameter_sharing:
+        - True: all actors shar
