@@ -29,4 +29,5 @@ class MAA2C(Agent):
                 has its own critic for estimating the value function, which allows each actor has
                 different reward structure, e.g., cooperative, competitive, mixed task
     - actor_parameter_sharing:
-        - True: all actors share a single policy which enables parameters and experiences sharing
+        - True: all actors share a single policy which enables parameters and experiences sharing,
+            this is mostly useful where the agents are homogeneous. Pl
