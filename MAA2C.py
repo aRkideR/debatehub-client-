@@ -30,4 +30,5 @@ class MAA2C(Agent):
                 different reward structure, e.g., cooperative, competitive, mixed task
     - actor_parameter_sharing:
         - True: all actors share a single policy which enables parameters and experiences sharing,
-            this is mostly useful where the agents are homogeneous. Pl
+            this is mostly useful where the agents are homogeneous. Please see Sec. 4.3 in [2] and
+            Sec. 4.1 & 4.2 in [3] for det
