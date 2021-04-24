@@ -33,4 +33,5 @@ class MAA2C(Agent):
             this is mostly useful where the agents are homogeneous. Please see Sec. 4.3 in [2] and
             Sec. 4.1 & 4.2 in [3] for details.
         - False: each actor use independent policy
-    - crit
+    - critic_parameter_sharing:
+        - True: all actors share a single critic
