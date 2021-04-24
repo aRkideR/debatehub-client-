@@ -31,4 +31,6 @@ class MAA2C(Agent):
     - actor_parameter_sharing:
         - True: all actors share a single policy which enables parameters and experiences sharing,
             this is mostly useful where the agents are homogeneous. Please see Sec. 4.3 in [2] and
-            Sec. 4.1 & 4.2 in [3] for det
+            Sec. 4.1 & 4.2 in [3] for details.
+        - False: each actor use independent policy
+    - crit
