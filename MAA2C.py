@@ -34,4 +34,5 @@ class MAA2C(Agent):
             Sec. 4.1 & 4.2 in [3] for details.
         - False: each actor use independent policy
     - critic_parameter_sharing:
-        - True: all actors share a single critic
+        - True: all actors share a single critic which enables parameters and experiences sharing,
+          
