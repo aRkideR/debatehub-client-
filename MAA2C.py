@@ -35,4 +35,6 @@ class MAA2C(Agent):
         - False: each actor use independent policy
     - critic_parameter_sharing:
         - True: all actors share a single critic which enables parameters and experiences sharing,
-            this is mostly useful where the agents are homogeneous and reward 
+            this is mostly useful where the agents are homogeneous and reward sharing holds. Please
+            see Sec. 4.1 in [3] for details.
+        -
