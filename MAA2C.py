@@ -37,4 +37,5 @@ class MAA2C(Agent):
         - True: all actors share a single critic which enables parameters and experiences sharing,
             this is mostly useful where the agents are homogeneous and reward sharing holds. Please
             see Sec. 4.1 in [3] for details.
-        - False: each actor use independent critic (though each 
+        - False: each actor use independent critic (though each critic can take other agents actions
+            as input, see MADDPG in [
