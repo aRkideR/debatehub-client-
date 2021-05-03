@@ -43,4 +43,4 @@ class MAA2C(Agent):
     Reference:
     [1] Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments
     [2] Cooperative Multi-Agent Control Using Deep Reinforcement Learning
-    [3] Parameter 
+    [3] Parameter Sharing Deep Deterministic Policy Gradient for Cooperative Multi-agent Reinforc
