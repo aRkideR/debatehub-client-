@@ -42,4 +42,5 @@ class MAA2C(Agent):
 
     Reference:
     [1] Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments
-    [2] Cooperative Multi-Agent C
+    [2] Cooperative Multi-Agent Control Using Deep Reinforcement Learning
+    [3] Parameter 
