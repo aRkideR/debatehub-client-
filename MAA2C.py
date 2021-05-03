@@ -41,4 +41,5 @@ class MAA2C(Agent):
             as input, see MADDPG in [1] for details)
 
     Reference:
-    [1] Multi-Agent Actor-Critic for Mixed C
+    [1] Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments
+    [2] Cooperative Multi-Agent C
