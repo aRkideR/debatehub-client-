@@ -38,4 +38,7 @@ class MAA2C(Agent):
             this is mostly useful where the agents are homogeneous and reward sharing holds. Please
             see Sec. 4.1 in [3] for details.
         - False: each actor use independent critic (though each critic can take other agents actions
-            as input, see MADDPG in [
+            as input, see MADDPG in [1] for details)
+
+    Reference:
+    [1] Multi-Agent Actor-Critic for Mixed C
