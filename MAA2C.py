@@ -43,4 +43,8 @@ class MAA2C(Agent):
     Reference:
     [1] Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments
     [2] Cooperative Multi-Agent Control Using Deep Reinforcement Learning
-    [3] Parameter Sharing Deep Deterministic Policy Gradient for Cooperative Multi-agent Reinforc
+    [3] Parameter Sharing Deep Deterministic Policy Gradient for Cooperative Multi-agent Reinforcement Learning
+
+    """
+    def __init__(self, env, n_agents, state_dim, action_dim,
+   
