@@ -49,4 +49,5 @@ class MAA2C(Agent):
     def __init__(self, env, n_agents, state_dim, action_dim,
                  memory_capacity=10000, max_steps=None,
                  roll_out_n_steps=10,
-                 reward_gamma=0.99, reward_scale=1., 
+                 reward_gamma=0.99, reward_scale=1., done_penalty=None,
+                 actor_hidden_size=32, critic_hidden
