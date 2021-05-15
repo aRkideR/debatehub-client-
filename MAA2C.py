@@ -52,4 +52,6 @@ class MAA2C(Agent):
                  reward_gamma=0.99, reward_scale=1., done_penalty=None,
                  actor_hidden_size=32, critic_hidden_size=32,
                  actor_output_act=nn.functional.log_softmax, critic_loss="mse",
-                 actor_lr=0.001, crit
+                 actor_lr=0.001, critic_lr=0.001,
+                 optimizer_type="rmsprop", entropy_reg=0.01,
+     
