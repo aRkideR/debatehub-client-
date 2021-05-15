@@ -55,4 +55,5 @@ class MAA2C(Agent):
                  actor_lr=0.001, critic_lr=0.001,
                  optimizer_type="rmsprop", entropy_reg=0.01,
                  max_grad_norm=0.5, batch_size=100, episodes_before_train=100,
-                
+                 epsilon_start=0.9, epsilon_end=0.01, epsilon_decay=200,
+                 use_cu
