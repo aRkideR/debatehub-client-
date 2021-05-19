@@ -59,4 +59,5 @@ class MAA2C(Agent):
                  use_cuda=True, training_strategy="cocurrent",
                  actor_parameter_sharing=False, critic_parameter_sharing=False):
         super(MAA2C, self).__init__(env, state_dim, action_dim,
-   
+                 memory_capacity, max_steps,
+                 r
