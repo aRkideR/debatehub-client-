@@ -61,4 +61,6 @@ class MAA2C(Agent):
         super(MAA2C, self).__init__(env, state_dim, action_dim,
                  memory_capacity, max_steps,
                  reward_gamma, reward_scale, done_penalty,
-                 actor_hidden_size, cri
+                 actor_hidden_size, critic_hidden_size,
+                 actor_output_act, critic_loss,
+        
