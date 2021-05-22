@@ -60,4 +60,5 @@ class MAA2C(Agent):
                  actor_parameter_sharing=False, critic_parameter_sharing=False):
         super(MAA2C, self).__init__(env, state_dim, action_dim,
                  memory_capacity, max_steps,
-                 r
+                 reward_gamma, reward_scale, done_penalty,
+                 actor_hidden_size, cri
