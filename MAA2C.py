@@ -69,4 +69,4 @@ class MAA2C(Agent):
                  epsilon_start, epsilon_end, epsilon_decay,
                  use_cuda)
 
-   
+        assert training_strategy in ["cocurrent", "centralized"]
