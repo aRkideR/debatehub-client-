@@ -70,3 +70,6 @@ class MAA2C(Agent):
                  use_cuda)
 
         assert training_strategy in ["cocurrent", "centralized"]
+
+        self.n_agents = n_agents
+        self.roll_out_n_step
