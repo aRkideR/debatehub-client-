@@ -72,4 +72,5 @@ class MAA2C(Agent):
         assert training_strategy in ["cocurrent", "centralized"]
 
         self.n_agents = n_agents
-        self.roll_out_n_step
+        self.roll_out_n_steps = roll_out_n_steps
+        self.training_strategy = tr
