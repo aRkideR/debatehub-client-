@@ -77,4 +77,4 @@ class MAA2C(Agent):
         self.actor_parameter_sharing = actor_parameter_sharing
         self.critic_parameter_sharing = critic_parameter_sharing
 
-        self.acto
+        self.actors = [ActorNetwork(self.state_dim, self.actor_hidden_size, self.action_dim, self.actor_output_a
