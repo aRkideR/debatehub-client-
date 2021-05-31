@@ -73,4 +73,6 @@ class MAA2C(Agent):
 
         self.n_agents = n_agents
         self.roll_out_n_steps = roll_out_n_steps
-        self.training_strategy = tr
+        self.training_strategy = training_strategy
+        self.actor_parameter_sharing = actor_parameter_sharing
+        sel
