@@ -79,4 +79,6 @@ class MAA2C(Agent):
 
         self.actors = [ActorNetwork(self.state_dim, self.actor_hidden_size, self.action_dim, self.actor_output_act)] * self.n_agents
         if self.training_strategy == "cocurrent":
-            self.critics = [CriticNetwork(self.state_dim, self.action_dim, self.critic_hidden_size, 1)] * self.n_a
+            self.critics = [CriticNetwork(self.state_dim, self.action_dim, self.critic_hidden_size, 1)] * self.n_agents
+        elif self.training_strategy == "centralized":
+            critic_
