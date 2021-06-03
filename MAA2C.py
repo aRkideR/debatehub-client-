@@ -78,4 +78,5 @@ class MAA2C(Agent):
         self.critic_parameter_sharing = critic_parameter_sharing
 
         self.actors = [ActorNetwork(self.state_dim, self.actor_hidden_size, self.action_dim, self.actor_output_act)] * self.n_agents
-        if self.training_strateg
+        if self.training_strategy == "cocurrent":
+            self.critics = [CriticNetwork(self.state
