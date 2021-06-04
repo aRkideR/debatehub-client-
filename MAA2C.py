@@ -83,4 +83,4 @@ class MAA2C(Agent):
         elif self.training_strategy == "centralized":
             critic_state_dim = self.n_agents * self.state_dim
             critic_action_dim = self.n_agents * self.action_dim
-            self.critics = [CriticNetwork(critic
+            self.critics = [CriticNetwork(critic_state_dim, critic_action_dim, self.critic_hidden_size, 1)] * self.n_agents
