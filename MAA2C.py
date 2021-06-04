@@ -81,4 +81,5 @@ class MAA2C(Agent):
         if self.training_strategy == "cocurrent":
             self.critics = [CriticNetwork(self.state_dim, self.action_dim, self.critic_hidden_size, 1)] * self.n_agents
         elif self.training_strategy == "centralized":
-            critic_
+            critic_state_dim = self.n_agents * self.state_dim
+            critic_action_di
