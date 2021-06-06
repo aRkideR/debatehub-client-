@@ -84,3 +84,5 @@ class MAA2C(Agent):
             critic_state_dim = self.n_agents * self.state_dim
             critic_action_dim = self.n_agents * self.action_dim
             self.critics = [CriticNetwork(critic_state_dim, critic_action_dim, self.critic_hidden_size, 1)] * self.n_agents
+        if optimizer_type == "adam":
+            self.actor_optimizers = [Ad
