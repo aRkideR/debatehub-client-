@@ -86,4 +86,6 @@ class MAA2C(Agent):
             self.critics = [CriticNetwork(critic_state_dim, critic_action_dim, self.critic_hidden_size, 1)] * self.n_agents
         if optimizer_type == "adam":
             self.actor_optimizers = [Adam(a.parameters(), lr=self.actor_lr) for a in self.actors]
-            self.critic_optimizers = [Adam(c.parameters(), lr=self.critic_l
+            self.critic_optimizers = [Adam(c.parameters(), lr=self.critic_lr) for c in self.critics]
+        elif optimizer_type == "rmsprop":
+            self
