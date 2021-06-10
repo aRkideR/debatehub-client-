@@ -88,4 +88,4 @@ class MAA2C(Agent):
             self.actor_optimizers = [Adam(a.parameters(), lr=self.actor_lr) for a in self.actors]
             self.critic_optimizers = [Adam(c.parameters(), lr=self.critic_lr) for c in self.critics]
         elif optimizer_type == "rmsprop":
-            self
+            self.actor_optimizers = [RMSprop(a.parameters(), lr=self.actor_lr) for a in self.actor
