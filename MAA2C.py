@@ -91,4 +91,5 @@ class MAA2C(Agent):
             self.actor_optimizers = [RMSprop(a.parameters(), lr=self.actor_lr) for a in self.actors]
             self.critic_optimizers = [RMSprop(c.parameters(), lr=self.critic_lr) for c in self.critics]
 
-        # tricky and 
+        # tricky and memory consumed implementation of parameter sharing
+        if self.actor
