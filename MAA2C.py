@@ -94,4 +94,5 @@ class MAA2C(Agent):
         # tricky and memory consumed implementation of parameter sharing
         if self.actor_parameter_sharing:
             for agent_id in range(1, self.n_agents):
-      
+                self.actors[agent_id] = self.actors[0]
+                self.
