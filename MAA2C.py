@@ -96,4 +96,6 @@ class MAA2C(Agent):
             for agent_id in range(1, self.n_agents):
                 self.actors[agent_id] = self.actors[0]
                 self.actor_optimizers[agent_id] = self.actor_optimizers[0]
-        if self.critic_paramet
+        if self.critic_parameter_sharing:
+            for agent_id in range(1, self.n_agents):
+      
