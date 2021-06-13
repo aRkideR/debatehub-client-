@@ -102,4 +102,6 @@ class MAA2C(Agent):
                 self.critic_optimizers[agent_id] = self.critic_optimizers[0]
 
         if self.use_cuda:
-  
+            for a in self.actors:
+                a.cuda()
+ 
