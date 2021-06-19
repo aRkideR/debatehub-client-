@@ -104,4 +104,7 @@ class MAA2C(Agent):
         if self.use_cuda:
             for a in self.actors:
                 a.cuda()
- 
+            for c in self.critics:
+                c.cuda()
+
+    # agent interact wi
