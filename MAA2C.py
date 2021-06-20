@@ -107,4 +107,5 @@ class MAA2C(Agent):
             for c in self.critics:
                 c.cuda()
 
-    # agent interact wi
+    # agent interact with the environment to collect experience
+    def intera
