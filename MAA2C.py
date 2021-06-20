@@ -108,4 +108,5 @@ class MAA2C(Agent):
                 c.cuda()
 
     # agent interact with the environment to collect experience
-    def intera
+    def interact(self):
+        if (self.max_steps is not None) and (self.
