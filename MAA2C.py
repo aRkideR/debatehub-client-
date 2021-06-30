@@ -109,4 +109,5 @@ class MAA2C(Agent):
 
     # agent interact with the environment to collect experience
     def interact(self):
-        if (self.max_steps is not None) and (self.
+        if (self.max_steps is not None) and (self.n_steps >= self.max_steps):
+            self.env_state = s
