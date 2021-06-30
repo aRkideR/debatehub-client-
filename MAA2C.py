@@ -113,4 +113,7 @@ class MAA2C(Agent):
             self.env_state = self.env.reset()
             self.n_steps = 0
         states = []
-        actions = [
+        actions = []
+        rewards = []
+        # take n steps
+        for i in range(self.roll_out_n_
