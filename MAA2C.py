@@ -121,4 +121,5 @@ class MAA2C(Agent):
             action = self.exploration_action(self.env_state)
             next_state, reward, done, _ = self.env.step(action)
             done = done[0]
-            action
+            actions.append([index_to_one_hot(a, self.action_dim) for a in action])
+  
