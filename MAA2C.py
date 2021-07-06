@@ -126,4 +126,8 @@ class MAA2C(Agent):
             final_state = next_state
             self.env_state = next_state
             if done:
-                self.env_state = s
+                self.env_state = self.env.reset()
+                break
+        # discount reward
+        if done:
+         
