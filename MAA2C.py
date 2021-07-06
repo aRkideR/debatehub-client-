@@ -130,4 +130,6 @@ class MAA2C(Agent):
                 break
         # discount reward
         if done:
-         
+            final_r = [0.0] * self.n_agents
+            self.n_episodes += 1
+       
