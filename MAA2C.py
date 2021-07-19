@@ -134,4 +134,6 @@ class MAA2C(Agent):
             self.n_episodes += 1
             self.episode_done = True
         else:
-            self.episode_done =
+            self.episode_done = False
+            final_action = self.action(final_state)
+            one_hot
