@@ -137,4 +137,6 @@ class MAA2C(Agent):
             self.episode_done = False
             final_action = self.action(final_state)
             one_hot_action = [index_to_one_hot(a, self.action_dim) for a in final_action]
-        
+            final_r = self.value(final_state, one_hot_action)
+
+        rewards = np.array(
