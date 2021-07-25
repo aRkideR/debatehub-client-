@@ -141,4 +141,4 @@ class MAA2C(Agent):
 
         rewards = np.array(rewards)
         for agent_id in range(self.n_agents):
-            rewards[
+            rewards[:,agent_id] = self._discount_reward(rewards[:,agent_id],
