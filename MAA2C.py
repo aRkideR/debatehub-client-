@@ -146,4 +146,6 @@ class MAA2C(Agent):
         self.n_steps += 1
         self.memory.push(states, actions, rewards)
 
-    # train on a roll o
+    # train on a roll out batch
+    def train(self):
+        if self.n_episodes <= self.episode
