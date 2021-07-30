@@ -152,4 +152,5 @@ class MAA2C(Agent):
             pass
 
         batch = self.memory.sample(self.batch_size)
-        states_var = to_tensor_var(batch.s
+        states_var = to_tensor_var(batch.states, self.use_cuda).view(-1, self.n_agents, self.state_dim)
+        
