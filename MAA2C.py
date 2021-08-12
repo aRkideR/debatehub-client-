@@ -158,4 +158,6 @@ class MAA2C(Agent):
         whole_states_var = states_var.view(-1, self.n_agents*self.state_dim)
         whole_actions_var = actions_var.view(-1, self.n_agents*self.action_dim)
 
-        for agent_id in range(s
+        for agent_id in range(self.n_agents):
+            # update actor network
+            self.acto
