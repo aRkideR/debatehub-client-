@@ -160,4 +160,5 @@ class MAA2C(Agent):
 
         for agent_id in range(self.n_agents):
             # update actor network
-            self.acto
+            self.actor_optimizers[agent_id].zero_grad()
+            action_log_probs = self.
