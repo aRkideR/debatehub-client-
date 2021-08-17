@@ -162,4 +162,5 @@ class MAA2C(Agent):
             # update actor network
             self.actor_optimizers[agent_id].zero_grad()
             action_log_probs = self.actors[agent_id](states_var[:,agent_id,:])
-            entr
+            entropy_loss = th.mean(entropy(th.exp(action_log_probs)))
+            action_log_probs = 
