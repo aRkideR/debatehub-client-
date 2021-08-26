@@ -163,4 +163,6 @@ class MAA2C(Agent):
             self.actor_optimizers[agent_id].zero_grad()
             action_log_probs = self.actors[agent_id](states_var[:,agent_id,:])
             entropy_loss = th.mean(entropy(th.exp(action_log_probs)))
-            action_log_probs = 
+            action_log_probs = th.sum(action_log_probs * actions_var[:,agent_id,:], 1)
+            if self.training_strategy == "cocurrent":
+                values = self.critics[
