@@ -166,4 +166,5 @@ class MAA2C(Agent):
             action_log_probs = th.sum(action_log_probs * actions_var[:,agent_id,:], 1)
             if self.training_strategy == "cocurrent":
                 values = self.critics[agent_id](states_var[:,agent_id,:], actions_var[:,agent_id,:])
-      
+            elif self.training_strategy == "centralized":
+                values =
