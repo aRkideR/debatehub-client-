@@ -168,4 +168,5 @@ class MAA2C(Agent):
                 values = self.critics[agent_id](states_var[:,agent_id,:], actions_var[:,agent_id,:])
             elif self.training_strategy == "centralized":
                 values = self.critics[agent_id](whole_states_var, whole_actions_var)
-            adva
+            advantages = rewards_var[:,agent_id,:] - values.detach()
+            pg_loss 
