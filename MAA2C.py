@@ -167,4 +167,5 @@ class MAA2C(Agent):
             if self.training_strategy == "cocurrent":
                 values = self.critics[agent_id](states_var[:,agent_id,:], actions_var[:,agent_id,:])
             elif self.training_strategy == "centralized":
-                values =
+                values = self.critics[agent_id](whole_states_var, whole_actions_var)
+            adva
