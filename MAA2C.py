@@ -169,4 +169,5 @@ class MAA2C(Agent):
             elif self.training_strategy == "centralized":
                 values = self.critics[agent_id](whole_states_var, whole_actions_var)
             advantages = rewards_var[:,agent_id,:] - values.detach()
-            pg_loss 
+            pg_loss = -th.mean(action_log_probs * advantages)
+            actor_lo
