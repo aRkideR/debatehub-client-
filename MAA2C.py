@@ -171,4 +171,6 @@ class MAA2C(Agent):
             advantages = rewards_var[:,agent_id,:] - values.detach()
             pg_loss = -th.mean(action_log_probs * advantages)
             actor_loss = pg_loss - entropy_loss * self.entropy_reg
-            actor_loss.ba
+            actor_loss.backward()
+            if self.max_grad_norm is not None:
+                n
