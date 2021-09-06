@@ -170,4 +170,5 @@ class MAA2C(Agent):
                 values = self.critics[agent_id](whole_states_var, whole_actions_var)
             advantages = rewards_var[:,agent_id,:] - values.detach()
             pg_loss = -th.mean(action_log_probs * advantages)
-            actor_lo
+            actor_loss = pg_loss - entropy_loss * self.entropy_reg
+            actor_loss.ba
