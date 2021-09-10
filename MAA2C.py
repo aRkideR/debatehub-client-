@@ -173,4 +173,5 @@ class MAA2C(Agent):
             actor_loss = pg_loss - entropy_loss * self.entropy_reg
             actor_loss.backward()
             if self.max_grad_norm is not None:
-                n
+                nn.utils.clip_grad_norm(self.actors[agent_id].parameters(), self.max_grad_norm)
+  
