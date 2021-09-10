@@ -174,4 +174,6 @@ class MAA2C(Agent):
             actor_loss.backward()
             if self.max_grad_norm is not None:
                 nn.utils.clip_grad_norm(self.actors[agent_id].parameters(), self.max_grad_norm)
-  
+            self.actor_optimizers[agent_id].step()
+
+            # 
