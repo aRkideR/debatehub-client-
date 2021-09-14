@@ -176,4 +176,5 @@ class MAA2C(Agent):
                 nn.utils.clip_grad_norm(self.actors[agent_id].parameters(), self.max_grad_norm)
             self.actor_optimizers[agent_id].step()
 
-            # 
+            # update critic network
+            self.critic_optimi
