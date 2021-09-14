@@ -177,4 +177,5 @@ class MAA2C(Agent):
             self.actor_optimizers[agent_id].step()
 
             # update critic network
-            self.critic_optimi
+            self.critic_optimizers[agent_id].zero_grad()
+            target_values = rewards_var[:
