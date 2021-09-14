@@ -178,4 +178,6 @@ class MAA2C(Agent):
 
             # update critic network
             self.critic_optimizers[agent_id].zero_grad()
-            target_values = rewards_var[:
+            target_values = rewards_var[:,agent_id,:]
+            if self.critic_loss == "huber":
+                c
