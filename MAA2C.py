@@ -180,4 +180,6 @@ class MAA2C(Agent):
             self.critic_optimizers[agent_id].zero_grad()
             target_values = rewards_var[:,agent_id,:]
             if self.critic_loss == "huber":
-                c
+                critic_loss = nn.functional.smooth_l1_loss(values, target_values)
+            else:
+   
