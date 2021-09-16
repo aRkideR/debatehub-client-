@@ -183,4 +183,6 @@ class MAA2C(Agent):
                 critic_loss = nn.functional.smooth_l1_loss(values, target_values)
             else:
                 critic_loss = nn.MSELoss()(values, target_values)
-            critic_los
+            critic_loss.backward()
+            if self.max_grad_norm is not None:
+                nn.uti
