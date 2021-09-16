@@ -185,4 +185,5 @@ class MAA2C(Agent):
                 critic_loss = nn.MSELoss()(values, target_values)
             critic_loss.backward()
             if self.max_grad_norm is not None:
-                nn.uti
+                nn.utils.clip_grad_norm(self.critics[agent_id].parameters(), self.max_grad_norm)
+   
