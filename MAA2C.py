@@ -186,4 +186,6 @@ class MAA2C(Agent):
             critic_loss.backward()
             if self.max_grad_norm is not None:
                 nn.utils.clip_grad_norm(self.critics[agent_id].parameters(), self.max_grad_norm)
-   
+            self.critic_optimizers[agent_id].step()
+
+    # predict softmax act
