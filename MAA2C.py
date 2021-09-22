@@ -188,4 +188,6 @@ class MAA2C(Agent):
                 nn.utils.clip_grad_norm(self.critics[agent_id].parameters(), self.max_grad_norm)
             self.critic_optimizers[agent_id].step()
 
-    # predict softmax act
+    # predict softmax action based on state
+    def _softmax_action(self, state):
+        state_var = 
