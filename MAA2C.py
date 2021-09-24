@@ -190,4 +190,5 @@ class MAA2C(Agent):
 
     # predict softmax action based on state
     def _softmax_action(self, state):
-        state_var = 
+        state_var = to_tensor_var([state], self.use_cuda)
+        softmax_action = np.zeros((sel
