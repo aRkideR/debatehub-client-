@@ -198,4 +198,6 @@ class MAA2C(Agent):
                 softmax_action[agent_id] = softmax_action_var.data.cpu().numpy()[0]
             else:
                 softmax_action[agent_id] = softmax_action_var.data.numpy()[0]
-        return softmax
+        return softmax_action
+
+    # predict action based on state, added ran
