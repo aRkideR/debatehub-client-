@@ -200,4 +200,5 @@ class MAA2C(Agent):
                 softmax_action[agent_id] = softmax_action_var.data.numpy()[0]
         return softmax_action
 
-    # predict action based on state, added ran
+    # predict action based on state, added random noise for exploration in training
+    def exploration_action(self,
