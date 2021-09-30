@@ -203,4 +203,5 @@ class MAA2C(Agent):
     # predict action based on state, added random noise for exploration in training
     def exploration_action(self, state):
         softmax_action = self._softmax_action(state)
-        actions = [0]*
+        actions = [0]*self.n_agents
+        epsilon = self.epsilon_end + (self.epsilon_s
