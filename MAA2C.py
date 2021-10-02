@@ -204,4 +204,5 @@ class MAA2C(Agent):
     def exploration_action(self, state):
         softmax_action = self._softmax_action(state)
         actions = [0]*self.n_agents
-        epsilon = self.epsilon_end + (self.epsilon_s
+        epsilon = self.epsilon_end + (self.epsilon_start - self.epsilon_end) * \
+                                     np.exp(-1. 
