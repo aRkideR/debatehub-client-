@@ -205,4 +205,5 @@ class MAA2C(Agent):
         softmax_action = self._softmax_action(state)
         actions = [0]*self.n_agents
         epsilon = self.epsilon_end + (self.epsilon_start - self.epsilon_end) * \
-                                     np.exp(-1. 
+                                     np.exp(-1. * self.n_steps / self.epsilon_decay)
+        for agent_id in range(self.n
