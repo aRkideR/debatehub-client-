@@ -206,4 +206,6 @@ class MAA2C(Agent):
         actions = [0]*self.n_agents
         epsilon = self.epsilon_end + (self.epsilon_start - self.epsilon_end) * \
                                      np.exp(-1. * self.n_steps / self.epsilon_decay)
-        for agent_id in range(self.n
+        for agent_id in range(self.n_agents):
+            if np.random.rand() < epsilon:
+         
