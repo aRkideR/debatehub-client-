@@ -208,4 +208,5 @@ class MAA2C(Agent):
                                      np.exp(-1. * self.n_steps / self.epsilon_decay)
         for agent_id in range(self.n_agents):
             if np.random.rand() < epsilon:
-         
+                actions[agent_id] = np.random.choice(self.action_dim)
+  
