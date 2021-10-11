@@ -209,4 +209,5 @@ class MAA2C(Agent):
         for agent_id in range(self.n_agents):
             if np.random.rand() < epsilon:
                 actions[agent_id] = np.random.choice(self.action_dim)
-  
+            else:
+                actions[agent_id] = np.argmax(softmax_action[agent_id])
