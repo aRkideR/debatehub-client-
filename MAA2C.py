@@ -211,3 +211,6 @@ class MAA2C(Agent):
                 actions[agent_id] = np.random.choice(self.action_dim)
             else:
                 actions[agent_id] = np.argmax(softmax_action[agent_id])
+        return actions
+
+    # predict action based on s
