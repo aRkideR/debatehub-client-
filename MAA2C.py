@@ -213,4 +213,6 @@ class MAA2C(Agent):
                 actions[agent_id] = np.argmax(softmax_action[agent_id])
         return actions
 
-    # predict action based on s
+    # predict action based on state for execution
+    def action(self, state):
+        softmax_actions = s
