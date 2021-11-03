@@ -220,4 +220,5 @@ class MAA2C(Agent):
         return actions
 
     # evaluate value
-    def value(self, 
+    def value(self, state, action):
+        state_var = to_tensor_var([state], self.use_cuda)
