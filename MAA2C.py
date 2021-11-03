@@ -223,4 +223,4 @@ class MAA2C(Agent):
     def value(self, state, action):
         state_var = to_tensor_var([state], self.use_cuda)
         action_var = to_tensor_var([action], self.use_cuda)
-        whole_
+        whole_state_var = state_var.view(-1, self.n_agents*self.state
