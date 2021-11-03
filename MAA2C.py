@@ -216,4 +216,8 @@ class MAA2C(Agent):
     # predict action based on state for execution
     def action(self, state):
         softmax_actions = self._softmax_action(state)
-        actions = np.argmax(softmax_actions, a
+        actions = np.argmax(softmax_actions, axis=1)
+        return actions
+
+    # evaluate value
+    def value(self, 
