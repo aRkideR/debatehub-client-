@@ -226,4 +226,5 @@ class MAA2C(Agent):
         whole_state_var = state_var.view(-1, self.n_agents*self.state_dim)
         whole_action_var = action_var.view(-1, self.n_agents*self.action_dim)
         values = [0]*self.n_agents
-        for agent_id in ra
+        for agent_id in range(self.n_agents):
+            if self.training_strategy == "cocur
