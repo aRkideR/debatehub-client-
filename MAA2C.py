@@ -227,4 +227,5 @@ class MAA2C(Agent):
         whole_action_var = action_var.view(-1, self.n_agents*self.action_dim)
         values = [0]*self.n_agents
         for agent_id in range(self.n_agents):
-            if self.training_strategy == "cocur
+            if self.training_strategy == "cocurrent":
+                value_var = self.critics[agent_id](state_var[:,agent_id,:],
