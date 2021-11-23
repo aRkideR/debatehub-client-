@@ -230,4 +230,6 @@ class MAA2C(Agent):
             if self.training_strategy == "cocurrent":
                 value_var = self.critics[agent_id](state_var[:,agent_id,:], action_var[:,agent_id,:])
             elif self.training_strategy == "centralized":
-                value_var = self.critics[agent_id](whole_state_va
+                value_var = self.critics[agent_id](whole_state_var, whole_action_var)
+            if self.use_cuda:
+                values[age
