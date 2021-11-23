@@ -228,4 +228,5 @@ class MAA2C(Agent):
         values = [0]*self.n_agents
         for agent_id in range(self.n_agents):
             if self.training_strategy == "cocurrent":
-                value_var = self.critics[agent_id](state_var[:,agent_id,:],
+                value_var = self.critics[agent_id](state_var[:,agent_id,:], action_var[:,agent_id,:])
+            elif self.training_strategy == "centraliz
