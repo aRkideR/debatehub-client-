@@ -232,4 +232,6 @@ class MAA2C(Agent):
             elif self.training_strategy == "centralized":
                 value_var = self.critics[agent_id](whole_state_var, whole_action_var)
             if self.use_cuda:
-                values[age
+                values[agent_id] = value_var.data.cpu().numpy()[0]
+            else:
+                v
