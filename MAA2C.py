@@ -234,4 +234,5 @@ class MAA2C(Agent):
             if self.use_cuda:
                 values[agent_id] = value_var.data.cpu().numpy()[0]
             else:
-                v
+                values[agent_id] = value_var.data.numpy()[0]
+        return values
