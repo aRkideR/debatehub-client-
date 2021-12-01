@@ -12,4 +12,5 @@ from common.utils import to_tensor_var
 
 class MADQN(object):
     """
-    An multi-agent learned with DQN using re
+    An multi-agent learned with DQN using replay memory and temporal difference
+    - use a value network to estimate the state-action 
