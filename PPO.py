@@ -13,4 +13,6 @@ from common.utils import index_to_one_hot, to_tensor_var
 
 class PPO(Agent):
     """
-    An agent learned with PPO using Adv
+    An agent learned with PPO using Advantage Actor-Critic framework
+    - Actor takes state as input
+    - Cr
