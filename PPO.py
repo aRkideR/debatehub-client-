@@ -15,4 +15,5 @@ class PPO(Agent):
     """
     An agent learned with PPO using Advantage Actor-Critic framework
     - Actor takes state as input
-    - Cr
+    - Critic takes both state and action as input
+    - agent interact with enviro
