@@ -18,3 +18,6 @@ class PPO(Agent):
     - Critic takes both state and action as input
     - agent interact with environment to collect experience
     - agent training with experience to update policy
+    - adam seems better than rmsprop for ppo
+    """
+    def __init__(self, e
