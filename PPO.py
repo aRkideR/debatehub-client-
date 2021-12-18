@@ -20,4 +20,5 @@ class PPO(Agent):
     - agent training with experience to update policy
     - adam seems better than rmsprop for ppo
     """
-    def __init__(self, e
+    def __init__(self, env, state_dim, action_dim,
+                 memory_capacity=10000, max_
