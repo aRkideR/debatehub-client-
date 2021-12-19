@@ -21,4 +21,6 @@ class PPO(Agent):
     - adam seems better than rmsprop for ppo
     """
     def __init__(self, env, state_dim, action_dim,
-                 memory_capacity=10000, max_
+                 memory_capacity=10000, max_steps=None,
+                 roll_out_n_steps=1, target_tau=1.,
+   
