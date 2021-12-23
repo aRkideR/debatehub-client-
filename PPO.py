@@ -24,4 +24,5 @@ class PPO(Agent):
                  memory_capacity=10000, max_steps=None,
                  roll_out_n_steps=1, target_tau=1.,
                  target_update_steps=5, clip_param=0.2,
-  
+                 reward_gamma=0.99, reward_scale=1., done_penalty=None,
+             
