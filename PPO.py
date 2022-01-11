@@ -33,4 +33,5 @@ class PPO(Agent):
                  epsilon_start=0.9, epsilon_end=0.01, epsilon_decay=200,
                  use_cuda=True):
         super(PPO, self).__init__(env, state_dim, action_dim,
-        
+                 memory_capacity, max_steps,
+                 reward_gamma, reward_s
