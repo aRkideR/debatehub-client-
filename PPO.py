@@ -34,4 +34,5 @@ class PPO(Agent):
                  use_cuda=True):
         super(PPO, self).__init__(env, state_dim, action_dim,
                  memory_capacity, max_steps,
-                 reward_gamma, reward_s
+                 reward_gamma, reward_scale, done_penalty,
+                 actor_hidden_size, critic_hidden_size
