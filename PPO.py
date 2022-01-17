@@ -43,4 +43,6 @@ class PPO(Agent):
                  epsilon_start, epsilon_end, epsilon_decay,
                  use_cuda)
 
-        self.roll_out_n_steps = roll
+        self.roll_out_n_steps = roll_out_n_steps
+        self.target_tau = target_tau
+        self.tar
