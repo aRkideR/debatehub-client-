@@ -40,4 +40,7 @@ class PPO(Agent):
                  actor_lr, critic_lr,
                  optimizer_type, entropy_reg,
                  max_grad_norm, batch_size, episodes_before_train,
-                 epsilon_start, epsilon_end, epsilon_d
+                 epsilon_start, epsilon_end, epsilon_decay,
+                 use_cuda)
+
+        self.roll_out_n_steps = roll
