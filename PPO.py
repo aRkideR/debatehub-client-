@@ -48,4 +48,5 @@ class PPO(Agent):
         self.target_update_steps = target_update_steps
         self.clip_param = clip_param
 
-     
+        self.actor = ActorNetwork(self.state_dim, self.actor_hidden_size,
+    
