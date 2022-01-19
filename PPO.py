@@ -50,4 +50,4 @@ class PPO(Agent):
 
         self.actor = ActorNetwork(self.state_dim, self.actor_hidden_size,
                                   self.action_dim, self.actor_output_act)
-        s
+        self.critic = CriticNetwork(self.state_dim, self.action_dim, self.critic_hi
