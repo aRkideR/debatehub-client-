@@ -45,4 +45,7 @@ class PPO(Agent):
 
         self.roll_out_n_steps = roll_out_n_steps
         self.target_tau = target_tau
-        self.tar
+        self.target_update_steps = target_update_steps
+        self.clip_param = clip_param
+
+     
