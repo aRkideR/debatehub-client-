@@ -49,4 +49,5 @@ class PPO(Agent):
         self.clip_param = clip_param
 
         self.actor = ActorNetwork(self.state_dim, self.actor_hidden_size,
-    
+                                  self.action_dim, self.actor_output_act)
+        s
