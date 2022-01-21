@@ -53,4 +53,6 @@ class PPO(Agent):
         self.critic = CriticNetwork(self.state_dim, self.action_dim, self.critic_hidden_size, 1)
         # to ensure target network and learning network has the same weights
         self.actor_target = deepcopy(self.actor)
-        self.c
+        self.critic_target = deepcopy(self.critic)
+
+        if self.optimizer_type ==
