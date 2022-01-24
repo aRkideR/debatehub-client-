@@ -56,4 +56,5 @@ class PPO(Agent):
         self.critic_target = deepcopy(self.critic)
 
         if self.optimizer_type == "adam":
-            self.actor_optimizer = Adam(self.actor.parameters(), lr
+            self.actor_optimizer = Adam(self.actor.parameters(), lr=self.actor_lr)
+            self.critic_optimizer = Adam(self.critic.pa
