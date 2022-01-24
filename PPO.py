@@ -58,4 +58,5 @@ class PPO(Agent):
         if self.optimizer_type == "adam":
             self.actor_optimizer = Adam(self.actor.parameters(), lr=self.actor_lr)
             self.critic_optimizer = Adam(self.critic.parameters(), lr=self.critic_lr)
-        elif self.optimizer_type == "rmsprop
+        elif self.optimizer_type == "rmsprop":
+            self.actor_optimizer = RMSprop(self.actor.pa
