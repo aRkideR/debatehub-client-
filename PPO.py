@@ -60,4 +60,6 @@ class PPO(Agent):
             self.critic_optimizer = Adam(self.critic.parameters(), lr=self.critic_lr)
         elif self.optimizer_type == "rmsprop":
             self.actor_optimizer = RMSprop(self.actor.parameters(), lr=self.actor_lr)
-            self.critic_optimiz
+            self.critic_optimizer = RMSprop(self.critic.parameters(), lr=self.critic_lr)
+
+        if self.u
