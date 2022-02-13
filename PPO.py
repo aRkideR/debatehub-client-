@@ -64,4 +64,6 @@ class PPO(Agent):
 
         if self.use_cuda:
             self.actor.cuda()
-            self
+            self.critic.cuda()
+            self.actor_target.cuda()
+            self.critic_ta
