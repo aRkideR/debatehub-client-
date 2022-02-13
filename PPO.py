@@ -66,4 +66,6 @@ class PPO(Agent):
             self.actor.cuda()
             self.critic.cuda()
             self.actor_target.cuda()
-            self.critic_ta
+            self.critic_target.cuda()
+
+    # agent interact with the environment to collect ex
