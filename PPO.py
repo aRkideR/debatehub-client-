@@ -62,4 +62,6 @@ class PPO(Agent):
             self.actor_optimizer = RMSprop(self.actor.parameters(), lr=self.actor_lr)
             self.critic_optimizer = RMSprop(self.critic.parameters(), lr=self.critic_lr)
 
-        if self.u
+        if self.use_cuda:
+            self.actor.cuda()
+            self
