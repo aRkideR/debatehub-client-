@@ -68,4 +68,6 @@ class PPO(Agent):
             self.actor_target.cuda()
             self.critic_target.cuda()
 
-    # agent interact with the environment to collect ex
+    # agent interact with the environment to collect experience
+    def interact(self):
+        super(PPO, self)._take_n_ste
