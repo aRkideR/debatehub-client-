@@ -70,4 +70,8 @@ class PPO(Agent):
 
     # agent interact with the environment to collect experience
     def interact(self):
-        super(PPO, self)._take_n_ste
+        super(PPO, self)._take_n_steps()
+
+    # train on a roll out batch
+    def train(self):
+        if self.n_e
