@@ -78,4 +78,5 @@ class PPO(Agent):
             pass
 
         batch = self.memory.sample(self.batch_size)
-        states_var = to_tensor
+        states_var = to_tensor_var(batch.states, self.use_cuda).view(-1, self.state_dim)
+        one_hot_actions = 
