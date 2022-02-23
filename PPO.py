@@ -86,4 +86,5 @@ class PPO(Agent):
         # update actor network
         self.actor_optimizer.zero_grad()
         values = self.critic_target(states_var, actions_var).detach()
-        ad
+        advantages = rewards_var - values
+        # # normalizing advantages seems not 
