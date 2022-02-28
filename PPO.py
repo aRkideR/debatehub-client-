@@ -88,4 +88,5 @@ class PPO(Agent):
         values = self.critic_target(states_var, actions_var).detach()
         advantages = rewards_var - values
         # # normalizing advantages seems not working correctly here
-        # advantages = (advantages - advantages.mean())
+        # advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-5)
+        action_log_probs = self.actor(sta
