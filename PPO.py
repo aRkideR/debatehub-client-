@@ -87,4 +87,5 @@ class PPO(Agent):
         self.actor_optimizer.zero_grad()
         values = self.critic_target(states_var, actions_var).detach()
         advantages = rewards_var - values
-        # # normalizing advantages seems not 
+        # # normalizing advantages seems not working correctly here
+        # advantages = (advantages - advantages.mean())
