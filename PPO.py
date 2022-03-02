@@ -90,4 +90,5 @@ class PPO(Agent):
         # # normalizing advantages seems not working correctly here
         # advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-5)
         action_log_probs = self.actor(states_var)
-        action_log_probs = th.sum(action_log_probs * actions_
+        action_log_probs = th.sum(action_log_probs * actions_var, 1)
+        old_action_log_probs = self.actor_target(states_
