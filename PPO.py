@@ -91,4 +91,5 @@ class PPO(Agent):
         # advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-5)
         action_log_probs = self.actor(states_var)
         action_log_probs = th.sum(action_log_probs * actions_var, 1)
-        old_action_log_probs = self.actor_target(states_
+        old_action_log_probs = self.actor_target(states_var).detach()
+        old_action_log_probs = th.sum(old_action_log_pr
