@@ -93,4 +93,6 @@ class PPO(Agent):
         action_log_probs = th.sum(action_log_probs * actions_var, 1)
         old_action_log_probs = self.actor_target(states_var).detach()
         old_action_log_probs = th.sum(old_action_log_probs * actions_var, 1)
-        ratio = th.exp(action_log_prob
+        ratio = th.exp(action_log_probs - old_action_log_probs)
+        surr1 = ratio * advantages
+        surr2
