@@ -97,4 +97,6 @@ class PPO(Agent):
         surr1 = ratio * advantages
         surr2 = th.clamp(ratio, 1.0 - self.clip_param, 1.0 + self.clip_param) * advantages
         # PPO's pessimistic surrogate (L^CLIP)
-        act
+        actor_loss = -th.mean(th.min(surr1, surr2))
+        actor_loss.backward()
+  
