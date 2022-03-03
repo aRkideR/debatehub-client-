@@ -95,4 +95,6 @@ class PPO(Agent):
         old_action_log_probs = th.sum(old_action_log_probs * actions_var, 1)
         ratio = th.exp(action_log_probs - old_action_log_probs)
         surr1 = ratio * advantages
-        surr2 = th.clamp(ratio, 1.0 - self.clip_param, 1.0 + self.clip_param) * ad
+        surr2 = th.clamp(ratio, 1.0 - self.clip_param, 1.0 + self.clip_param) * advantages
+        # PPO's pessimistic surrogate (L^CLIP)
+        act
