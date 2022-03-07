@@ -99,4 +99,5 @@ class PPO(Agent):
         # PPO's pessimistic surrogate (L^CLIP)
         actor_loss = -th.mean(th.min(surr1, surr2))
         actor_loss.backward()
-  
+        if self.max_grad_norm is not None:
+            nn.utils
