@@ -100,4 +100,5 @@ class PPO(Agent):
         actor_loss = -th.mean(th.min(surr1, surr2))
         actor_loss.backward()
         if self.max_grad_norm is not None:
-            nn.utils
+            nn.utils.clip_grad_norm(self.actor.parameters(), self.max_grad_norm)
+        self.a
