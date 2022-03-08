@@ -104,4 +104,6 @@ class PPO(Agent):
         self.actor_optimizer.step()
 
         # update critic network
-        self.critic_optim
+        self.critic_optimizer.zero_grad()
+        target_values = rewards_var
+        va
