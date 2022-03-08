@@ -101,4 +101,7 @@ class PPO(Agent):
         actor_loss.backward()
         if self.max_grad_norm is not None:
             nn.utils.clip_grad_norm(self.actor.parameters(), self.max_grad_norm)
-        self.a
+        self.actor_optimizer.step()
+
+        # update critic network
+        self.critic_optim
