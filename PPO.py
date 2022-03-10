@@ -106,4 +106,5 @@ class PPO(Agent):
         # update critic network
         self.critic_optimizer.zero_grad()
         target_values = rewards_var
-        va
+        values = self.critic(states_var, actions_var)
+        if self.crit
