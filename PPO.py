@@ -110,4 +110,6 @@ class PPO(Agent):
         if self.critic_loss == "huber":
             critic_loss = nn.functional.smooth_l1_loss(values, target_values)
         else:
-            critic_loss 
+            critic_loss = nn.MSELoss()(values, target_values)
+        critic_loss.backward()
+     
