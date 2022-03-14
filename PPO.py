@@ -108,4 +108,6 @@ class PPO(Agent):
         target_values = rewards_var
         values = self.critic(states_var, actions_var)
         if self.critic_loss == "huber":
-            critic_loss = nn.functional.smoot
+            critic_loss = nn.functional.smooth_l1_loss(values, target_values)
+        else:
+            critic_loss 
