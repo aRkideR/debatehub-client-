@@ -117,4 +117,5 @@ class PPO(Agent):
         self.critic_optimizer.step()
 
         # update actor target network and critic target network
-        if self.n_steps % self.target_update_steps == 0 and self
+        if self.n_steps % self.target_update_steps == 0 and self.n_steps > 0:
+            super(PPO, self)._soft_update_target
