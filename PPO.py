@@ -116,4 +116,5 @@ class PPO(Agent):
             nn.utils.clip_grad_norm(self.critic.parameters(), self.max_grad_norm)
         self.critic_optimizer.step()
 
-        # update actor target network and critic target n
+        # update actor target network and critic target network
+        if self.n_steps % self.target_update_steps == 0 and self
