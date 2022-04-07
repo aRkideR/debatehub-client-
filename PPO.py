@@ -121,4 +121,6 @@ class PPO(Agent):
             super(PPO, self)._soft_update_target(self.actor_target, self.actor)
             super(PPO, self)._soft_update_target(self.critic_target, self.critic)
 
-    # predict 
+    # predict softmax action based on state
+    def _softmax_action(self, state):
+        stat
