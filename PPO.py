@@ -123,4 +123,5 @@ class PPO(Agent):
 
     # predict softmax action based on state
     def _softmax_action(self, state):
-        stat
+        state_var = to_tensor_var([state], self.use_cuda)
+        softmax_action_var
