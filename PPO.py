@@ -128,4 +128,5 @@ class PPO(Agent):
         if self.use_cuda:
             softmax_action = softmax_action_var.data.cpu().numpy()[0]
         else:
-  
+            softmax_action = softmax_action_var.data.numpy()[0]
+        return 
