@@ -129,4 +129,6 @@ class PPO(Agent):
             softmax_action = softmax_action_var.data.cpu().numpy()[0]
         else:
             softmax_action = softmax_action_var.data.numpy()[0]
-        return 
+        return softmax_action
+
+    # choose an action based on state with rand
