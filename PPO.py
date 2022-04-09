@@ -126,4 +126,6 @@ class PPO(Agent):
         state_var = to_tensor_var([state], self.use_cuda)
         softmax_action_var = th.exp(self.actor(state_var))
         if self.use_cuda:
-            s
+            softmax_action = softmax_action_var.data.cpu().numpy()[0]
+        else:
+  
