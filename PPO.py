@@ -131,4 +131,5 @@ class PPO(Agent):
             softmax_action = softmax_action_var.data.numpy()[0]
         return softmax_action
 
-    # choose an action based on state with rand
+    # choose an action based on state with random noise added for exploration in training
+    def exploration_a
