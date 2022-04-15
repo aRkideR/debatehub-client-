@@ -132,4 +132,6 @@ class PPO(Agent):
         return softmax_action
 
     # choose an action based on state with random noise added for exploration in training
-    def exploration_a
+    def exploration_action(self, state):
+        softmax_action = self._softmax_action(state)
+    
