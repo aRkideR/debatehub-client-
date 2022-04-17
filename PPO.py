@@ -134,4 +134,5 @@ class PPO(Agent):
     # choose an action based on state with random noise added for exploration in training
     def exploration_action(self, state):
         softmax_action = self._softmax_action(state)
-        epsilon = self.epsilon_end + (self.epsilon_start - self.epsilo
+        epsilon = self.epsilon_end + (self.epsilon_start - self.epsilon_end) * \
+                                  np.exp(-1. * self.n_steps / self.ep
