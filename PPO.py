@@ -135,4 +135,6 @@ class PPO(Agent):
     def exploration_action(self, state):
         softmax_action = self._softmax_action(state)
         epsilon = self.epsilon_end + (self.epsilon_start - self.epsilon_end) * \
-                                  np.exp(-1. * self.n_steps / self.ep
+                                  np.exp(-1. * self.n_steps / self.epsilon_decay)
+        if np.random.rand() < epsilon:
+            actio
