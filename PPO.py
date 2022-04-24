@@ -137,4 +137,6 @@ class PPO(Agent):
         epsilon = self.epsilon_end + (self.epsilon_start - self.epsilon_end) * \
                                   np.exp(-1. * self.n_steps / self.epsilon_decay)
         if np.random.rand() < epsilon:
-            actio
+            action = np.random.choice(self.action_dim)
+        else:
+            a
