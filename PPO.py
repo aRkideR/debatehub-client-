@@ -139,4 +139,7 @@ class PPO(Agent):
         if np.random.rand() < epsilon:
             action = np.random.choice(self.action_dim)
         else:
-            a
+            action = np.argmax(softmax_action)
+        return action
+
+    # cho
