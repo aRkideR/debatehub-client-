@@ -142,4 +142,5 @@ class PPO(Agent):
             action = np.argmax(softmax_action)
         return action
 
-    # cho
+    # choose an action based on state for execution
+    def action(
