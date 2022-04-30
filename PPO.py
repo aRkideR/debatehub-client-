@@ -143,4 +143,5 @@ class PPO(Agent):
         return action
 
     # choose an action based on state for execution
-    def action(
+    def action(self, state):
+        softmax_action = self._softmax_action
