@@ -149,4 +149,5 @@ class PPO(Agent):
         return action
 
     # evaluate value for a state-action pair
-    def value(self, sta
+    def value(self, state, action):
+        state_var = to_tensor_var([state], self.use_cuda)
