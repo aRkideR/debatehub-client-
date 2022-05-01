@@ -146,4 +146,7 @@ class PPO(Agent):
     def action(self, state):
         softmax_action = self._softmax_action(state)
         action = np.argmax(softmax_action)
-        return
+        return action
+
+    # evaluate value for a state-action pair
+    def value(self, sta
