@@ -155,4 +155,6 @@ class PPO(Agent):
         action_var = to_tensor_var([action], self.use_cuda)
         value_var = self.critic(state_var, action_var)
         if self.use_cuda:
-            value = val
+            value = value_var.data.cpu().numpy()[0]
+        else:
+            value = value_var.data.nump
