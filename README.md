@@ -1,3 +1,3 @@
 # pytorch-madrl
 
-This project includ
+This project includes PyTorch implementations of various Deep Reinforcement Learning algorithms for 
