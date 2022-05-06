@@ -157,4 +157,5 @@ class PPO(Agent):
         if self.use_cuda:
             value = value_var.data.cpu().numpy()[0]
         else:
-            value = value_var.data.nump
+            value = value_var.data.numpy()[0]
+        return value
