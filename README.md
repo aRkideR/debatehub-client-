@@ -4,3 +4,8 @@ This project includes PyTorch implementations of various Deep Reinforcement Lear
 
 - [ ] A2C
 - [ ] ACKTR
+- [ ] DQN
+- [ ] DDPG
+- [ ] PPO
+
+It is written in a mod
