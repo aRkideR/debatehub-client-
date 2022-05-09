@@ -8,4 +8,4 @@ This project includes PyTorch implementations of various Deep Reinforcement Lear
 - [ ] DDPG
 - [ ] PPO
 
-It is written in a mod
+It is written in a modular way to allow for sharing code between different algorithms. In speci
