@@ -9,4 +9,4 @@ This project includes PyTorch implementations of various Deep Reinforcement Lear
 - [ ] PPO
 
 It is written in a modular way to allow for sharing code between different algorithms. In specific, each algorithm is represented as a learning agent with a unified interface including the following components:
-- [ ] interact: interac
+- [ ] interact: interact with the environment to collect experience. Taking one step forward and n st
