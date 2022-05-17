@@ -12,4 +12,6 @@ It is written in a modular way to allow for sharing code between different algor
 - [ ] interact: interact with the environment to collect experience. Taking one step forward and n steps forward are both supported (see `_take_one_step_` and `_take_n_steps`, respectively)
 - [ ] train: train on a sample batch
 - [ ] exploration_action: choose an action based on state with random noise added for exploration in training
-- [ ] action: choose an action based on state for exe
+- [ ] action: choose an action based on state for execution
+- [ ] value: evaluate value for a state-action pair
+- [ ] evaluation
