@@ -14,4 +14,12 @@ It is written in a modular way to allow for sharing code between different algor
 - [ ] exploration_action: choose an action based on state with random noise added for exploration in training
 - [ ] action: choose an action based on state for execution
 - [ ] value: evaluate value for a state-action pair
-- [ ] evaluation
+- [ ] evaluation: evaluation the learned agent
+
+# Requirements
+
+- gym
+- python 3.6
+- pytorch
+
+# 
