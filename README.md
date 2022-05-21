@@ -22,4 +22,13 @@ It is written in a modular way to allow for sharing code between different algor
 - python 3.6
 - pytorch
 
-# 
+# Usage
+
+To train a model:
+
+```
+$ python run_a2c.py
+```
+
+## Results
+It's extr
