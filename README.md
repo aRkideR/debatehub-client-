@@ -31,4 +31,4 @@ $ python run_a2c.py
 ```
 
 ## Results
-It's extr
+It's extremely difficult to reproduce results for Reinforcement Learning algorithms. Due t
