@@ -35,4 +35,10 @@ It's extremely difficult to reproduce results for Reinforcement Learning algorit
 
 ### A2C
 
-![CartPole-v0](output/CartP
+![CartPole-v0](output/CartPole-v0_a2c.png)
+
+### ACKTR
+
+![CartPole-v0](output/CartPole-v0_acktr.png)
+
+### DD
