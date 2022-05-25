@@ -41,4 +41,10 @@ It's extremely difficult to reproduce results for Reinforcement Learning algorit
 
 ![CartPole-v0](output/CartPole-v0_acktr.png)
 
-### DD
+### DDPG
+
+![Pendulum-v0](output/Pendulum-v0_ddpg.png)
+
+### DQN
+
+![CartPole
