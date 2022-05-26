@@ -47,4 +47,11 @@ It's extremely difficult to reproduce results for Reinforcement Learning algorit
 
 ### DQN
 
-![CartPole
+![CartPole-v0](output/CartPole-v0_dqn.png)
+
+### PPO
+
+![CartPole-v0](output/CartPole-v0_ppo.png)
+
+
+# TOD
