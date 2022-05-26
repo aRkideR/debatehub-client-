@@ -54,4 +54,10 @@ It's extremely difficult to reproduce results for Reinforcement Learning algorit
 ![CartPole-v0](output/CartPole-v0_ppo.png)
 
 
-# TOD
+# TODO
+- [ ] TRPO
+- [ ] LOLA
+- [ ] Parameter noise
+
+# Acknowledgments
+This 
