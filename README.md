@@ -60,4 +60,5 @@ It's extremely difficult to reproduce results for Reinforcement Learning algorit
 - [ ] Parameter noise
 
 # Acknowledgments
-This 
+This project gets inspirations from the following projects:
+- [ ] Ilya Kostrikov's [p
