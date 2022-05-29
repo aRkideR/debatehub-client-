@@ -62,4 +62,7 @@ It's extremely difficult to reproduce results for Reinforcement Learning algorit
 # Acknowledgments
 This project gets inspirations from the following projects:
 - [ ] Ilya Kostrikov's [pytorch-a2c-ppo-acktr](https://github.com/ChenglongChen/pytorch-a2c-ppo-acktr) (kfac optimizer is taken from here)
-- [ ] OpenAI's [baselines](https://git
+- [ ] OpenAI's [baselines](https://github.com/openai/baselines)
+
+# License
+MIT
