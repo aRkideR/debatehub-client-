@@ -10,4 +10,5 @@ from common.utils import identity
 class Agent(object):
     """
     A unified agent interface:
-    - interact: interact with 
+    - interact: interact with the environment to collect experience
+        - _take_one_step: take
