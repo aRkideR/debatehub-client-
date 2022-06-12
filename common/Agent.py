@@ -15,4 +15,5 @@ class Agent(object):
         - _take_n_steps: take n steps
         - _discount_reward: discount roll out rewards
     - train: train on a sample batch
-        -
+        - _soft_update_target: soft update the target network
+    - exploration_action: 
