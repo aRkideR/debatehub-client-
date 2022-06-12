@@ -16,4 +16,5 @@ class Agent(object):
         - _discount_reward: discount roll out rewards
     - train: train on a sample batch
         - _soft_update_target: soft update the target network
-    - exploration_action: 
+    - exploration_action: choose an action based on state with random noise
+          
