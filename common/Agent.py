@@ -18,4 +18,5 @@ class Agent(object):
         - _soft_update_target: soft update the target network
     - exploration_action: choose an action based on state with random noise
                             added for exploration in training
-    - action: choose
+    - action: choose an action based on state for execution
+    - value: evaluate valu
