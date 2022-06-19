@@ -19,4 +19,5 @@ class Agent(object):
     - exploration_action: choose an action based on state with random noise
                             added for exploration in training
     - action: choose an action based on state for execution
-    - value: evaluate valu
+    - value: evaluate value for a state-action pair
+    - evaluation: evaluation a learned a
