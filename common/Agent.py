@@ -20,4 +20,7 @@ class Agent(object):
                             added for exploration in training
     - action: choose an action based on state for execution
     - value: evaluate value for a state-action pair
-    - evaluation: evaluation a learned a
+    - evaluation: evaluation a learned agent
+    """
+    def __init__(self, env, state_dim, action_dim,
+     
