@@ -23,4 +23,5 @@ class Agent(object):
     - evaluation: evaluation a learned agent
     """
     def __init__(self, env, state_dim, action_dim,
-     
+                 memory_capacity=10000, max_steps=10000,
+                 r
