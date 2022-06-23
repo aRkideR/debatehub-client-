@@ -25,4 +25,5 @@ class Agent(object):
     def __init__(self, env, state_dim, action_dim,
                  memory_capacity=10000, max_steps=10000,
                  reward_gamma=0.99, reward_scale=1., done_penalty=None,
-                 actor_hidd
+                 actor_hidden_size=32, critic_hidden_size=32,
+                 actor_output_act=identi
