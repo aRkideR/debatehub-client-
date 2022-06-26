@@ -29,4 +29,5 @@ class Agent(object):
                  actor_output_act=identity, critic_loss="mse",
                  actor_lr=0.01, critic_lr=0.01,
                  optimizer_type="rmsprop", entropy_reg=0.01,
-                 max_g
+                 max_grad_norm=0.5, batch_size=100, episodes_before_train=100,
+                 epsil
