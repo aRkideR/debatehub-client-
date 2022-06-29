@@ -36,4 +36,6 @@ class Agent(object):
         self.env = env
         self.state_dim = state_dim
         self.action_dim = action_dim
-        self.env_
+        self.env_state = self.env.reset()
+        self.n_episodes = 0
+        self.
