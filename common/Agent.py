@@ -34,4 +34,6 @@ class Agent(object):
                  use_cuda=True):
 
         self.env = env
-        self.state_dim = state_di
+        self.state_dim = state_dim
+        self.action_dim = action_dim
+        self.env_
