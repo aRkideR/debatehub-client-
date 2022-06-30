@@ -38,4 +38,6 @@ class Agent(object):
         self.action_dim = action_dim
         self.env_state = self.env.reset()
         self.n_episodes = 0
-        self.
+        self.n_steps = 0
+        self.max_steps = max_steps
+        self.roll_
