@@ -40,4 +40,7 @@ class Agent(object):
         self.n_episodes = 0
         self.n_steps = 0
         self.max_steps = max_steps
-        self.roll_
+        self.roll_out_n_steps = 1
+
+        self.reward_gamma = reward_gamma
+      
