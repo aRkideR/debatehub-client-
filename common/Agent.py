@@ -43,4 +43,5 @@ class Agent(object):
         self.roll_out_n_steps = 1
 
         self.reward_gamma = reward_gamma
-      
+        self.reward_scale = reward_scale
+        self.done_penalty = done_p
