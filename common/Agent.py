@@ -46,4 +46,6 @@ class Agent(object):
         self.reward_scale = reward_scale
         self.done_penalty = done_penalty
 
-        self.memory = ReplayMemory(memory_capaci
+        self.memory = ReplayMemory(memory_capacity)
+        self.actor_hidden_size = actor_hidden_size
+        self.critic_h
