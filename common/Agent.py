@@ -50,4 +50,6 @@ class Agent(object):
         self.actor_hidden_size = actor_hidden_size
         self.critic_hidden_size = critic_hidden_size
         self.actor_output_act = actor_output_act
-  
+        self.critic_loss = critic_loss
+        self.actor_lr = actor_lr
+        self.critic_lr
