@@ -48,4 +48,6 @@ class Agent(object):
 
         self.memory = ReplayMemory(memory_capacity)
         self.actor_hidden_size = actor_hidden_size
-        self.critic_h
+        self.critic_hidden_size = critic_hidden_size
+        self.actor_output_act = actor_output_act
+  
