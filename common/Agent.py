@@ -52,4 +52,6 @@ class Agent(object):
         self.actor_output_act = actor_output_act
         self.critic_loss = critic_loss
         self.actor_lr = actor_lr
-        self.critic_lr
+        self.critic_lr = critic_lr
+        self.optimizer_type = optimizer_type
+        self.ent
