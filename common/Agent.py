@@ -56,4 +56,5 @@ class Agent(object):
         self.optimizer_type = optimizer_type
         self.entropy_reg = entropy_reg
         self.max_grad_norm = max_grad_norm
-        self.b
+        self.batch_size = batch_size
+        self.episodes_before_train = episodes_before_tra
