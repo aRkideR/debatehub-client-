@@ -54,4 +54,6 @@ class Agent(object):
         self.actor_lr = actor_lr
         self.critic_lr = critic_lr
         self.optimizer_type = optimizer_type
-        self.ent
+        self.entropy_reg = entropy_reg
+        self.max_grad_norm = max_grad_norm
+        self.b
