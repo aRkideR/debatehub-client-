@@ -57,4 +57,7 @@ class Agent(object):
         self.entropy_reg = entropy_reg
         self.max_grad_norm = max_grad_norm
         self.batch_size = batch_size
-        self.episodes_before_train = episodes_before_tra
+        self.episodes_before_train = episodes_before_train
+        self.target_tau = 0.01
+
+        # params for eps
