@@ -60,4 +60,6 @@ class Agent(object):
         self.episodes_before_train = episodes_before_train
         self.target_tau = 0.01
 
-        # params for eps
+        # params for epsilon greedy
+        self.epsilon_start = epsilon_start
+        
