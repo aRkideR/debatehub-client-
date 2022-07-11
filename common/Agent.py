@@ -65,4 +65,6 @@ class Agent(object):
         self.epsilon_end = epsilon_end
         self.epsilon_decay = epsilon_decay
 
-    
+        self.use_cuda = use_cuda and th.cuda.is_available()
+
+ 
