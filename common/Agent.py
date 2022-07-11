@@ -62,4 +62,7 @@ class Agent(object):
 
         # params for epsilon greedy
         self.epsilon_start = epsilon_start
-        
+        self.epsilon_end = epsilon_end
+        self.epsilon_decay = epsilon_decay
+
+    
