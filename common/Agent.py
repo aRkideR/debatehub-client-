@@ -67,4 +67,5 @@ class Agent(object):
 
         self.use_cuda = use_cuda and th.cuda.is_available()
 
- 
+    # agent interact with the environment to collect experience
+    def interact(self):
