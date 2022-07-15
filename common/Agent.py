@@ -69,3 +69,8 @@ class Agent(object):
 
     # agent interact with the environment to collect experience
     def interact(self):
+        pass
+
+    # take one step
+    def _take_one_step(self):
+        if (
