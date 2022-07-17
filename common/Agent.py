@@ -73,4 +73,6 @@ class Agent(object):
 
     # take one step
     def _take_one_step(self):
-        if (self.max_steps is not None) and (self.n_steps >= self.max_steps)
+        if (self.max_steps is not None) and (self.n_steps >= self.max_steps):
+            self.env_state = self.env.reset()
+            self.
