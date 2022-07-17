@@ -73,4 +73,4 @@ class Agent(object):
 
     # take one step
     def _take_one_step(self):
-        if (
+        if (self.max_steps is not None) and (self.n_steps >= self.max_steps)
