@@ -77,4 +77,5 @@ class Agent(object):
             self.env_state = self.env.reset()
             self.n_steps = 0
         state = self.env_state
-        action = self.e
+        action = self.exploration_action(self.env_state)
+        next_state, reward, done, _ = self.e
