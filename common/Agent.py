@@ -78,4 +78,6 @@ class Agent(object):
             self.n_steps = 0
         state = self.env_state
         action = self.exploration_action(self.env_state)
-        next_state, reward, done, _ = self.e
+        next_state, reward, done, _ = self.env.step(action)
+        if done:
+            if self.done_penalty is not None
