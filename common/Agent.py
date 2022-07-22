@@ -82,4 +82,6 @@ class Agent(object):
         if done:
             if self.done_penalty is not None:
                 reward = self.done_penalty
-            next_state = [0] * len(s
+            next_state = [0] * len(state)
+            self.env_state = self.env.reset()
+            self.n
