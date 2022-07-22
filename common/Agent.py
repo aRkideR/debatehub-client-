@@ -84,4 +84,7 @@ class Agent(object):
                 reward = self.done_penalty
             next_state = [0] * len(state)
             self.env_state = self.env.reset()
-            self.n
+            self.n_episodes += 1
+            self.episode_done = True
+        else:
+       
