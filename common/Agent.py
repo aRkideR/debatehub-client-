@@ -87,4 +87,6 @@ class Agent(object):
             self.n_episodes += 1
             self.episode_done = True
         else:
-       
+            self.env_state = next_state
+            self.episode_done = False
+        self
