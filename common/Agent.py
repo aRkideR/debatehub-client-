@@ -89,4 +89,7 @@ class Agent(object):
         else:
             self.env_state = next_state
             self.episode_done = False
-        self
+        self.n_steps += 1
+        self.memory.push(state, action, reward, next_state, done)
+
+  
