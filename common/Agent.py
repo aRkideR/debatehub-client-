@@ -92,4 +92,6 @@ class Agent(object):
         self.n_steps += 1
         self.memory.push(state, action, reward, next_state, done)
 
-  
+    # take n steps
+    def _take_n_steps(self):
+        if (self.max_steps 
