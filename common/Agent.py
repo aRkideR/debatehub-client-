@@ -94,4 +94,5 @@ class Agent(object):
 
     # take n steps
     def _take_n_steps(self):
-        if (self.max_steps 
+        if (self.max_steps is not None) and (self.n_steps >= self.max_steps):
+            s
