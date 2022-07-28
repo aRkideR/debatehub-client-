@@ -97,4 +97,7 @@ class Agent(object):
         if (self.max_steps is not None) and (self.n_steps >= self.max_steps):
             self.env_state = self.env.reset()
             self.n_steps = 0
-        state
+        states = []
+        actions = []
+        rewards = []
+        # take 
