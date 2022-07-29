@@ -100,4 +100,6 @@ class Agent(object):
         states = []
         actions = []
         rewards = []
-        # take 
+        # take n steps
+        for i in range(self.roll_out_n_steps):
+            states.appe
