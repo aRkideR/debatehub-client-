@@ -102,4 +102,5 @@ class Agent(object):
         rewards = []
         # take n steps
         for i in range(self.roll_out_n_steps):
-            states.appe
+            states.append(self.env_state)
+            action = self.exploration_action(self.e
