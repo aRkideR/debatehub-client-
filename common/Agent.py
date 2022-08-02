@@ -108,4 +108,6 @@ class Agent(object):
             actions.append(action)
             if done and self.done_penalty is not None:
                 reward = self.done_penalty
-            rewa
+            rewards.append(reward)
+            final_state = next_state
+            self.env_state = nex
