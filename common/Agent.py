@@ -110,4 +110,6 @@ class Agent(object):
                 reward = self.done_penalty
             rewards.append(reward)
             final_state = next_state
-            self.env_state = nex
+            self.env_state = next_state
+            if done:
+                self.env_state = se
