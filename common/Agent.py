@@ -112,4 +112,7 @@ class Agent(object):
             final_state = next_state
             self.env_state = next_state
             if done:
-                self.env_state = se
+                self.env_state = self.env.reset()
+                break
+        # discount reward
+        if 
