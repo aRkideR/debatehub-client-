@@ -115,4 +115,6 @@ class Agent(object):
                 self.env_state = self.env.reset()
                 break
         # discount reward
-        if 
+        if done:
+            final_value = 0.0
+            self.n_episodes += 1
