@@ -120,4 +120,6 @@ class Agent(object):
             self.n_episodes += 1
             self.episode_done = True
         else:
-            self.ep
+            self.episode_done = False
+            final_action = self.action(final_state)
+        
