@@ -118,3 +118,6 @@ class Agent(object):
         if done:
             final_value = 0.0
             self.n_episodes += 1
+            self.episode_done = True
+        else:
+            self.ep
