@@ -122,4 +122,5 @@ class Agent(object):
         else:
             self.episode_done = False
             final_action = self.action(final_state)
-        
+            final_value = self.value(final_state, final_action)
+        r
