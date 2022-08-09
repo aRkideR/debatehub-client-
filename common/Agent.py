@@ -124,4 +124,7 @@ class Agent(object):
             final_action = self.action(final_state)
             final_value = self.value(final_state, final_action)
         rewards = self._discount_reward(rewards, final_value)
-        self.n_ste
+        self.n_steps += 1
+        self.memory.push(states, actions, rewards)
+
+    # di
