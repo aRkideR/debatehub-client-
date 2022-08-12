@@ -127,4 +127,5 @@ class Agent(object):
         self.n_steps += 1
         self.memory.push(states, actions, rewards)
 
-    # di
+    # discount roll out rewards
+    def _discount_reward(self, rewards, f
