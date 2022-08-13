@@ -128,4 +128,6 @@ class Agent(object):
         self.memory.push(states, actions, rewards)
 
     # discount roll out rewards
-    def _discount_reward(self, rewards, f
+    def _discount_reward(self, rewards, final_value):
+        discounted_r = np.zeros_like(rewards)
+        running_add = fi
