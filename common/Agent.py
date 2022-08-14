@@ -130,4 +130,6 @@ class Agent(object):
     # discount roll out rewards
     def _discount_reward(self, rewards, final_value):
         discounted_r = np.zeros_like(rewards)
-        running_add = fi
+        running_add = final_value
+        for t in reversed(range(0, len(rewards))):
+            running_add = run
