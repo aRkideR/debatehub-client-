@@ -132,4 +132,5 @@ class Agent(object):
         discounted_r = np.zeros_like(rewards)
         running_add = final_value
         for t in reversed(range(0, len(rewards))):
-            running_add = run
+            running_add = running_add * self.reward_gamma + rewards[t]
+            discounted_r[
