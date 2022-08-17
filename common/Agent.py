@@ -133,4 +133,7 @@ class Agent(object):
         running_add = final_value
         for t in reversed(range(0, len(rewards))):
             running_add = running_add * self.reward_gamma + rewards[t]
-            discounted_r[
+            discounted_r[t] = running_add
+        return discounted_r
+
+    # sof
