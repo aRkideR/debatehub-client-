@@ -136,4 +136,5 @@ class Agent(object):
             discounted_r[t] = running_add
         return discounted_r
 
-    # sof
+    # soft update the actor target network or critic target network
+    def _soft_upd
