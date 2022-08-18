@@ -137,4 +137,5 @@ class Agent(object):
         return discounted_r
 
     # soft update the actor target network or critic target network
-    def _soft_upd
+    def _soft_update_target(self, target, source):
+        for t, s in zip(target.parameter
