@@ -138,4 +138,6 @@ class Agent(object):
 
     # soft update the actor target network or critic target network
     def _soft_update_target(self, target, source):
-        for t, s in zip(target.parameter
+        for t, s in zip(target.parameters(), source.parameters()):
+            t.data.copy_(
+                (1. - self.t
