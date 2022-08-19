@@ -140,4 +140,6 @@ class Agent(object):
     def _soft_update_target(self, target, source):
         for t, s in zip(target.parameters(), source.parameters()):
             t.data.copy_(
-                (1. - self.t
+                (1. - self.target_tau) * t.data + self.target_tau * s.data)
+
+    # train on a sample ba
