@@ -142,4 +142,8 @@ class Agent(object):
             t.data.copy_(
                 (1. - self.target_tau) * t.data + self.target_tau * s.data)
 
-    # train on a sample ba
+    # train on a sample batch
+    def train(self):
+        pass
+
+    # choose an action based o
