@@ -146,4 +146,5 @@ class Agent(object):
     def train(self):
         pass
 
-    # choose an action based o
+    # choose an action based on state with random noise added for exploration in training
+    def 
