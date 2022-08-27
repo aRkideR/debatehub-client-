@@ -150,4 +150,8 @@ class Agent(object):
     def exploration_action(self, state):
         pass
 
-    # choose an action bas
+    # choose an action based on state for execution
+    def action(self, state):
+        pass
+
+    # evaluate
