@@ -154,4 +154,6 @@ class Agent(object):
     def action(self, state):
         pass
 
-    # evaluate
+    # evaluate value for a state-action pair
+    def value(self, state, action):
+      
