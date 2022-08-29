@@ -156,4 +156,7 @@ class Agent(object):
 
     # evaluate value for a state-action pair
     def value(self, state, action):
-      
+        pass
+
+    # evaluation the learned agent
+    def evaluation(self, env, eval_
