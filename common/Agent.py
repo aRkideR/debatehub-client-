@@ -159,4 +159,7 @@ class Agent(object):
         pass
 
     # evaluation the learned agent
-    def evaluation(self, env, eval_
+    def evaluation(self, env, eval_episodes=10):
+        rewards = []
+        infos = []
+        for i
