@@ -162,4 +162,6 @@ class Agent(object):
     def evaluation(self, env, eval_episodes=10):
         rewards = []
         infos = []
-        for i
+        for i in range(eval_episodes):
+            rewards_i = []
+         
