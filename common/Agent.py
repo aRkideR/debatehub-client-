@@ -166,4 +166,5 @@ class Agent(object):
             rewards_i = []
             infos_i = []
             state = env.reset()
-            actio
+            action = self.action(state)
+            state, reward, done, info = env.step(acti
