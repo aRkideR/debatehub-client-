@@ -164,4 +164,6 @@ class Agent(object):
         infos = []
         for i in range(eval_episodes):
             rewards_i = []
-         
+            infos_i = []
+            state = env.reset()
+            actio
