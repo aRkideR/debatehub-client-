@@ -167,4 +167,6 @@ class Agent(object):
             infos_i = []
             state = env.reset()
             action = self.action(state)
-            state, reward, done, info = env.step(acti
+            state, reward, done, info = env.step(action)
+            done = done[0] if isinstance(done, list) else done
+           
