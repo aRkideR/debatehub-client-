@@ -171,4 +171,6 @@ class Agent(object):
             done = done[0] if isinstance(done, list) else done
             rewards_i.append(reward)
             infos_i.append(info)
-  
+            while not done:
+                action = self.action(state)
+ 
