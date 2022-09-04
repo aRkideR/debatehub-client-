@@ -173,4 +173,5 @@ class Agent(object):
             infos_i.append(info)
             while not done:
                 action = self.action(state)
- 
+                state, reward, done, info = env.step(action)
+                don
