@@ -174,4 +174,5 @@ class Agent(object):
             while not done:
                 action = self.action(state)
                 state, reward, done, info = env.step(action)
-                don
+                done = done[0] if isinstance(done, list) else done
+                rew
