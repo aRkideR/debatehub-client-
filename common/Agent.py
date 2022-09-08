@@ -179,4 +179,4 @@ class Agent(object):
                 infos_i.append(info)
             rewards.append(rewards_i)
             infos.append(infos_i)
-      
+        return rewards, infos
