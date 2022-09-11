@@ -7,4 +7,5 @@ class ActorNetwork(nn.Module):
     """
     A network for actor
     """
-    def __init__(self, state_dim, hidde
+    def __init__(self, state_dim, hidden_size, output_size, output_act):
+        super(ActorNetwork, self).__ini
