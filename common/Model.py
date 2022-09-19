@@ -15,4 +15,6 @@ class ActorNetwork(nn.Module):
         # activation function for the output
         self.output_act = output_act
 
-    def __call__(self, state
+    def __call__(self, state):
+        out = nn.functional.relu(self.fc1(state))
+        out
