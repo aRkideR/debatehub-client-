@@ -19,4 +19,9 @@ class ActorNetwork(nn.Module):
         out = nn.functional.relu(self.fc1(state))
         out = nn.functional.relu(self.fc2(out))
         out = self.output_act(self.fc3(out))
- 
+        return out
+
+
+class CriticNetwork(nn.Module):
+    """
+    A network for
