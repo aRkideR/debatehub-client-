@@ -24,4 +24,6 @@ class ActorNetwork(nn.Module):
 
 class CriticNetwork(nn.Module):
     """
-    A network for
+    A network for critic
+    """
+    def __init__(self, state_dim, action_dim, hidden_size, o
