@@ -26,4 +26,6 @@ class CriticNetwork(nn.Module):
     """
     A network for critic
     """
-    def __init__(self, state_dim, action_dim, hidden_size, o
+    def __init__(self, state_dim, action_dim, hidden_size, output_size=1):
+        super(CriticNetwork, self).__init__()
+        self.
