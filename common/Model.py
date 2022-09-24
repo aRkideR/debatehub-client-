@@ -28,4 +28,5 @@ class CriticNetwork(nn.Module):
     """
     def __init__(self, state_dim, action_dim, hidden_size, output_size=1):
         super(CriticNetwork, self).__init__()
-        self.
+        self.fc1 = nn.Linear(state_dim, hidden_size)
+        self.fc2 = nn.Linear(hidden_s
