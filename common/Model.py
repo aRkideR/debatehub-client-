@@ -33,4 +33,6 @@ class CriticNetwork(nn.Module):
         self.fc3 = nn.Linear(hidden_size, output_size)
 
     def __call__(self, state, action):
-        out = nn.fu
+        out = nn.functional.relu(self.fc1(state))
+        out = th.cat([out, action], 1)
+        ou
