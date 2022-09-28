@@ -37,4 +37,8 @@ class CriticNetwork(nn.Module):
         out = th.cat([out, action], 1)
         out = nn.functional.relu(self.fc2(out))
         out = self.fc3(out)
-        ret
+        return out
+
+class ActorCriticNetwork(nn.Module):
+    """
+    An actor-critic net
