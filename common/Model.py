@@ -42,4 +42,6 @@ class CriticNetwork(nn.Module):
 class ActorCriticNetwork(nn.Module):
     """
     An actor-critic network that shared lower-layer representations but
-    have distinct 
+    have distinct output layers
+    """
+    def __init__(self, state_dim, action_dim, hidde
