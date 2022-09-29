@@ -41,4 +41,5 @@ class CriticNetwork(nn.Module):
 
 class ActorCriticNetwork(nn.Module):
     """
-    An actor-critic net
+    An actor-critic network that shared lower-layer representations but
+    have distinct 
