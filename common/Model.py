@@ -46,4 +46,5 @@ class ActorCriticNetwork(nn.Module):
     """
     def __init__(self, state_dim, action_dim, hidden_size,
                  actor_output_act, critic_output_size=1):
-        
+        super(ActorCriticNetwork, self).__init__()
+        self.fc1 = nn.Linear(state_dim,
