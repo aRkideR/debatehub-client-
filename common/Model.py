@@ -51,4 +51,7 @@ class ActorCriticNetwork(nn.Module):
         self.fc2 = nn.Linear(hidden_size, hidden_size)
         self.actor_linear = nn.Linear(hidden_size, action_dim)
         self.critic_linear = nn.Linear(hidden_size, critic_output_size)
-        self.actor_output_
+        self.actor_output_act = actor_output_act
+
+    def __call__(self, state):
+        out = nn.functi
