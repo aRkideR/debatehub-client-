@@ -54,4 +54,6 @@ class ActorCriticNetwork(nn.Module):
         self.actor_output_act = actor_output_act
 
     def __call__(self, state):
-        out = nn.functi
+        out = nn.functional.relu(self.fc1(state))
+        out = nn.functional.relu(self.fc2(out))
+       
