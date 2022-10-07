@@ -57,3 +57,5 @@ class ActorCriticNetwork(nn.Module):
         out = nn.functional.relu(self.fc1(state))
         out = nn.functional.relu(self.fc2(out))
         act = self.actor_output_act(self.actor_linear(out))
+        val = self.critic_linear(out)
+        return act, val
