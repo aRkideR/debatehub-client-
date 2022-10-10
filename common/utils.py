@@ -13,4 +13,8 @@ def entropy(p):
 
 
 def kl_log_probs(log_p1, log_p2):
-    return -th.sum(th.exp(log_p1
+    return -th.sum(th.exp(log_p1)*(log_p2 - log_p1), 1)
+
+
+def index_to_one_hot(index, dim):
+    if 
