@@ -18,4 +18,7 @@ def kl_log_probs(log_p1, log_p2):
 
 def index_to_one_hot(index, dim):
     if isinstance(index, np.int) or isinstance(index, np.int64):
-        one_hot =
+        one_hot = np.zeros(dim)
+        one_hot[index] = 1.
+    else:
+        one_hot 
