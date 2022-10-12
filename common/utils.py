@@ -23,3 +23,7 @@ def index_to_one_hot(index, dim):
     else:
         one_hot = np.zeros((len(index), dim))
         one_hot[np.arange(len(index)), index] = 1.
+    return one_hot
+
+
+def to_tensor_var(x, use_cuda=True, dtype="float
