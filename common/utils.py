@@ -26,4 +26,5 @@ def index_to_one_hot(index, dim):
     return one_hot
 
 
-def to_tensor_var(x, use_cuda=True, dtype="float
+def to_tensor_var(x, use_cuda=True, dtype="float"):
+    FloatTensor = th.cuda.FloatTensor if use_cuda else th
