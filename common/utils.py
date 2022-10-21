@@ -35,4 +35,6 @@ def to_tensor_var(x, use_cuda=True, dtype="float"):
         return Variable(FloatTensor(x))
     elif dtype == "long":
         x = np.array(x, dtype=np.long).tolist()
-        retur
+        return Variable(LongTensor(x))
+    elif dtype == "byte":
+        x = np.
