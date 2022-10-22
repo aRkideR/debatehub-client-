@@ -41,4 +41,8 @@ def to_tensor_var(x, use_cuda=True, dtype="float"):
         return Variable(ByteTensor(x))
     else:
         x = np.array(x, dtype=np.float64).tolist()
-        return Variabl
+        return Variable(FloatTensor(x))
+
+
+def agg_double_list(l):
+    # l: [ [...], [...], [...] 
