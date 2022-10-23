@@ -45,4 +45,6 @@ def to_tensor_var(x, use_cuda=True, dtype="float"):
 
 
 def agg_double_list(l):
-    # l: [ [...], [...], [...] 
+    # l: [ [...], [...], [...] ]
+    # l_i: result of each step in the i-th episode
+    s = [np.sum(np.arr
