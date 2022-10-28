@@ -10,4 +10,9 @@ import matplotlib.pyplot as plt
 
 
 MAX_EPISODES = 5000
-EPISODES_BEFORE_T
+EPISODES_BEFORE_TRAIN = 0
+EVAL_EPISODES = 10
+EVAL_INTERVAL = 100
+
+# roll out n steps
+ROLL_OUT_
