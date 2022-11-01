@@ -18,4 +18,7 @@ EVAL_INTERVAL = 100
 ROLL_OUT_N_STEPS = 10
 # only remember the latest ROLL_OUT_N_STEPS
 MEMORY_CAPACITY = ROLL_OUT_N_STEPS
-# only use the latest ROLL_OUT_N
+# only use the latest ROLL_OUT_N_STEPS for training A2C
+BATCH_SIZE = ROLL_OUT_N_STEPS
+
+REWARD_DISCOUNTED
