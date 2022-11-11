@@ -46,4 +46,7 @@ def run(env_id="CartPole-v0"):
     if len(env.action_space.shape) > 1:
         action_dim = env.action_space.shape[0]
     else:
-        action_dim = env.action_s
+        action_dim = env.action_space.n
+
+    acktr = ACKTR(env=env, memory_capacity=MEMORY_CAPACITY,
+ 
