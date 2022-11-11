@@ -44,4 +44,6 @@ def run(env_id="CartPole-v0"):
     env_eval.seed(RANDOM_SEED)
     state_dim = env.observation_space.shape[0]
     if len(env.action_space.shape) > 1:
-        action_d
+        action_dim = env.action_space.shape[0]
+    else:
+        action_dim = env.action_s
