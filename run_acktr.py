@@ -49,4 +49,5 @@ def run(env_id="CartPole-v0"):
         action_dim = env.action_space.n
 
     acktr = ACKTR(env=env, memory_capacity=MEMORY_CAPACITY,
- 
+              state_dim=state_dim, action_dim=action_dim,
+              batch_s
