@@ -50,4 +50,5 @@ def run(env_id="CartPole-v0"):
 
     acktr = ACKTR(env=env, memory_capacity=MEMORY_CAPACITY,
               state_dim=state_dim, action_dim=action_dim,
-              batch_s
+              batch_size=BATCH_SIZE, entropy_reg=ENTROPY_REG,
+              done_penalty=DONE_PEN
