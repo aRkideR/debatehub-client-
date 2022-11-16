@@ -53,4 +53,5 @@ def run(env_id="CartPole-v0"):
               batch_size=BATCH_SIZE, entropy_reg=ENTROPY_REG,
               done_penalty=DONE_PENALTY, roll_out_n_steps=ROLL_OUT_N_STEPS,
               reward_gamma=REWARD_DISCOUNTED_GAMMA,
-              epsilon_start=EPSILON_START, eps
+              epsilon_start=EPSILON_START, epsilon_end=EPSILON_END,
+              epsilon_decay=EPSILON_DECAY, max_
