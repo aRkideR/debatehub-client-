@@ -59,3 +59,6 @@ def run(env_id="CartPole-v0"):
               critic_loss=CRITIC_LOSS)
 
     episodes =[]
+    eval_rewards =[]
+    while acktr.n_episodes < MAX_EPISODES:
+  
