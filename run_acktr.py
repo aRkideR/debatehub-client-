@@ -62,4 +62,6 @@ def run(env_id="CartPole-v0"):
     eval_rewards =[]
     while acktr.n_episodes < MAX_EPISODES:
         acktr.interact()
-        if acktr.n_episodes >= EPISODES_BEFOR
+        if acktr.n_episodes >= EPISODES_BEFORE_TRAIN:
+            acktr.train()
+        if acktr.episode_done and (
