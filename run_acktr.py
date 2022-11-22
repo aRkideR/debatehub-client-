@@ -64,4 +64,5 @@ def run(env_id="CartPole-v0"):
         acktr.interact()
         if acktr.n_episodes >= EPISODES_BEFORE_TRAIN:
             acktr.train()
-        if acktr.episode_done and (
+        if acktr.episode_done and ((acktr.n_episodes+1)%EVAL_INTERVAL == 0):
+            rewards, _ = acktr.
