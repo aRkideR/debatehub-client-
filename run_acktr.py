@@ -67,4 +67,5 @@ def run(env_id="CartPole-v0"):
         if acktr.episode_done and ((acktr.n_episodes+1)%EVAL_INTERVAL == 0):
             rewards, _ = acktr.evaluation(env_eval, EVAL_EPISODES)
             rewards_mu, rewards_std = agg_double_list(rewards)
-            print("Episode %d, Average Reward %.2f" % (ack
+            print("Episode %d, Average Reward %.2f" % (acktr.n_episodes+1, rewards_mu))
+            episodes.append(acktr.n_epi
