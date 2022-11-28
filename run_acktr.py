@@ -73,4 +73,5 @@ def run(env_id="CartPole-v0"):
 
     episodes = np.array(episodes)
     eval_rewards = np.array(eval_rewards)
-    
+    np.savetxt("./output/%s_acktr_episodes.txt"%env_id, episodes)
+    np.savetxt("./o
