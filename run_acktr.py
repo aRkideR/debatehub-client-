@@ -79,4 +79,6 @@ def run(env_id="CartPole-v0"):
     plt.figure()
     plt.plot(episodes, eval_rewards)
     plt.title("%s" % env_id)
-    pl
+    plt.xlabel("Episode")
+    plt.ylabel("Average Reward")
+    plt.legend(["A
