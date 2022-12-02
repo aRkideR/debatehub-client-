@@ -85,4 +85,7 @@ def run(env_id="CartPole-v0"):
     plt.savefig("./output/%s_acktr.png"%env_id)
 
 
-if __name__ ==
+if __name__ == "__main__":
+    if len(sys.argv) >= 2:
+        run(sys.argv[1])
+    els
