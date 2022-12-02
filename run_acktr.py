@@ -81,4 +81,8 @@ def run(env_id="CartPole-v0"):
     plt.title("%s" % env_id)
     plt.xlabel("Episode")
     plt.ylabel("Average Reward")
-    plt.legend(["A
+    plt.legend(["ACKTR"])
+    plt.savefig("./output/%s_acktr.png"%env_id)
+
+
+if __name__ ==
