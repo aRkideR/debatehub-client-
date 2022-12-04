@@ -4,4 +4,9 @@ from common.utils import agg_double_list
 
 import gym
 import sys
-impo
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+MAX_EPISODES = 5000
+EPISODES
