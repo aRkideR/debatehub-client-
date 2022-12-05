@@ -12,3 +12,6 @@ MAX_EPISODES = 5000
 EPISODES_BEFORE_TRAIN = 100
 EVAL_EPISODES = 10
 EVAL_INTERVAL = 100
+
+# max steps in each episode, prevent from running too long
+MAX_STEPS = 10000 # Non
