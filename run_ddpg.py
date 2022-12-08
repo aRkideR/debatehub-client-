@@ -30,4 +30,11 @@ EPSILON_START = 0.99
 EPSILON_END = 0.05
 EPSILON_DECAY = 500
 
-DONE_
+DONE_PENALTY = None
+
+RANDOM_SEED = 2017
+
+
+def run(env_id="Pendulum-v0"):
+
+   
