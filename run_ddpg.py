@@ -44,4 +44,5 @@ def run(env_id="Pendulum-v0"):
     state_dim = env.observation_space.shape[0]
     action_dim = env.action_space.shape[0]
 
-    ddpg 
+    ddpg = DDPG(env=env, memory_capacity=MEMORY_CAPACITY,
+                state_di
