@@ -45,4 +45,5 @@ def run(env_id="Pendulum-v0"):
     action_dim = env.action_space.shape[0]
 
     ddpg = DDPG(env=env, memory_capacity=MEMORY_CAPACITY,
-                state_di
+                state_dim=state_dim, action_dim=action_dim,
+                batch_size=BATCH_SIZE, max_steps=MAX_S
