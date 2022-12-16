@@ -48,4 +48,5 @@ def run(env_id="Pendulum-v0"):
                 state_dim=state_dim, action_dim=action_dim,
                 batch_size=BATCH_SIZE, max_steps=MAX_STEPS,
                 done_penalty=DONE_PENALTY,
-                target_update_st
+                target_update_steps=TARGET_UPDATE_STEPS, target_tau=TARGET_TAU,
+                reward_gamma=REWARD
