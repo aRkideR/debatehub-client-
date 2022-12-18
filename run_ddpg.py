@@ -50,4 +50,5 @@ def run(env_id="Pendulum-v0"):
                 done_penalty=DONE_PENALTY,
                 target_update_steps=TARGET_UPDATE_STEPS, target_tau=TARGET_TAU,
                 reward_gamma=REWARD_DISCOUNTED_GAMMA, critic_loss=CRITIC_LOSS,
-                epsilon_start=EPSILON_STAR
+                epsilon_start=EPSILON_START, epsilon_end=EPSILON_END,
+                epsilon_decay=EPSILON_DECAY, max_grad_norm=MAX
