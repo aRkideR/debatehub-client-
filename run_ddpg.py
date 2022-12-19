@@ -54,3 +54,6 @@ def run(env_id="Pendulum-v0"):
                 epsilon_decay=EPSILON_DECAY, max_grad_norm=MAX_GRAD_NORM,
                 episodes_before_train=EPISODES_BEFORE_TRAIN)
 
+    episodes =[]
+    eval_rewards =[]
+    while ddpg.n_episodes <
