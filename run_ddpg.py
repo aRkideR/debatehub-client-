@@ -60,4 +60,5 @@ def run(env_id="Pendulum-v0"):
         ddpg.interact()
         if ddpg.n_episodes >= EPISODES_BEFORE_TRAIN:
             ddpg.train()
-        if ddpg.episode_done and ((ddpg.n_epi
+        if ddpg.episode_done and ((ddpg.n_episodes+1)%EVAL_INTERVAL == 0):
+            rewards, _ = ddpg.evaluatio
