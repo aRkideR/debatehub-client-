@@ -63,4 +63,5 @@ def run(env_id="Pendulum-v0"):
         if ddpg.episode_done and ((ddpg.n_episodes+1)%EVAL_INTERVAL == 0):
             rewards, _ = ddpg.evaluation(env_eval, EVAL_EPISODES)
             rewards_mu, rewards_std = agg_double_list(rewards)
-            print("Episode: %d, Av
+            print("Episode: %d, Average Reward: %.5f" % (ddpg.n_episodes+1, rewards_mu))
+      
