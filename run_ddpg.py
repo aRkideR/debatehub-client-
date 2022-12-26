@@ -65,4 +65,7 @@ def run(env_id="Pendulum-v0"):
             rewards_mu, rewards_std = agg_double_list(rewards)
             print("Episode: %d, Average Reward: %.5f" % (ddpg.n_episodes+1, rewards_mu))
             episodes.append(ddpg.n_episodes+1)
-            eval_rewards.append
+            eval_rewards.append(rewards_mu)
+
+    episodes = np.array(episodes)
+    eval_rewards = np.a
