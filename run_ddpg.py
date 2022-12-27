@@ -68,4 +68,5 @@ def run(env_id="Pendulum-v0"):
             eval_rewards.append(rewards_mu)
 
     episodes = np.array(episodes)
-    eval_rewards = np.a
+    eval_rewards = np.array(eval_rewards)
+    np.savetxt("./output/%s_ddpg_ep
