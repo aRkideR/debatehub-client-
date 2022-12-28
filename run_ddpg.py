@@ -73,4 +73,6 @@ def run(env_id="Pendulum-v0"):
     np.savetxt("./output/%s_ddpg_eval_rewards.txt"%env_id, eval_rewards)
 
     plt.figure()
-    plt.plot(epis
+    plt.plot(episodes, eval_rewards)
+    plt.title("%s" % env_id)
+    plt.xlabel("Episode"
