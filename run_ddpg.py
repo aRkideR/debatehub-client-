@@ -78,4 +78,8 @@ def run(env_id="Pendulum-v0"):
     plt.xlabel("Episode")
     plt.ylabel("Average Reward")
     plt.legend(["DDPG"])
-    plt.savefig(
+    plt.savefig("./output/%s_ddpg.png"%env_id)
+
+
+if __name__ == "__main__":
+  
