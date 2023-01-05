@@ -15,4 +15,5 @@ EVAL_INTERVAL = 100
 
 # roll out n steps
 ROLL_OUT_N_STEPS = 10
-# only
+# only remember the latest ROLL_OUT_N_STEPS
+MEMORY_CAPACITY = ROLL_
