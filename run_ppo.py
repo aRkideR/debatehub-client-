@@ -35,4 +35,9 @@ EPSILON_START = 0.99
 EPSILON_END = 0.05
 EPSILON_DECAY = 500
 
-RANDOM_SEE
+RANDOM_SEED = 2017
+
+
+def run(env_id="CartPole-v0"):
+
+    env = gym.make(env_id)
