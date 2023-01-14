@@ -44,4 +44,6 @@ def run(env_id="CartPole-v0"):
     env.seed(RANDOM_SEED)
     env_eval = gym.make(env_id)
     env_eval.seed(RANDOM_SEED)
-    state_dim = env.observation_space.sh
+    state_dim = env.observation_space.shape[0]
+    if len(env.action_space.shape) > 1:
+        action_dim = env.
