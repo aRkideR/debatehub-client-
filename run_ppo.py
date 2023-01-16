@@ -50,3 +50,5 @@ def run(env_id="CartPole-v0"):
     else:
         action_dim = env.action_space.n
 
+    ppo = PPO(env=env, memory_capacity=MEMORY_CAPACITY,
+         
