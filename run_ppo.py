@@ -54,4 +54,5 @@ def run(env_id="CartPole-v0"):
               state_dim=state_dim, action_dim=action_dim,
               batch_size=BATCH_SIZE, entropy_reg=ENTROPY_REG,
               done_penalty=DONE_PENALTY, roll_out_n_steps=ROLL_OUT_N_STEPS,
-              targ
+              target_update_steps=TARGET_UPDATE_STEPS, target_tau=TARGET_TAU,
+              rewa
