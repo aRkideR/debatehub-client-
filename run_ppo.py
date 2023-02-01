@@ -56,4 +56,5 @@ def run(env_id="CartPole-v0"):
               done_penalty=DONE_PENALTY, roll_out_n_steps=ROLL_OUT_N_STEPS,
               target_update_steps=TARGET_UPDATE_STEPS, target_tau=TARGET_TAU,
               reward_gamma=REWARD_DISCOUNTED_GAMMA,
-              epsilon_start=EPSILON_STA
+              epsilon_start=EPSILON_START, epsilon_end=EPSILON_END,
+              epsilon_decay=EPSILON
