@@ -57,4 +57,5 @@ def run(env_id="CartPole-v0"):
               target_update_steps=TARGET_UPDATE_STEPS, target_tau=TARGET_TAU,
               reward_gamma=REWARD_DISCOUNTED_GAMMA,
               epsilon_start=EPSILON_START, epsilon_end=EPSILON_END,
-              epsilon_decay=EPSILON
+              epsilon_decay=EPSILON_DECAY, max_grad_norm=MAX_GRAD_NORM,
+              episodes_before_tra
