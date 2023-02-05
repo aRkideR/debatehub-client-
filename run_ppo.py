@@ -62,4 +62,7 @@ def run(env_id="CartPole-v0"):
               critic_loss=CRITIC_LOSS)
 
     episodes =[]
-    eval_
+    eval_rewards =[]
+    while ppo.n_episodes < MAX_EPISODES:
+        ppo.interact()
+        i
