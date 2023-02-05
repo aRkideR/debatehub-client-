@@ -65,4 +65,6 @@ def run(env_id="CartPole-v0"):
     eval_rewards =[]
     while ppo.n_episodes < MAX_EPISODES:
         ppo.interact()
-        i
+        if ppo.n_episodes >= EPISODES_BEFORE_TRAIN:
+            ppo.train()
+        
