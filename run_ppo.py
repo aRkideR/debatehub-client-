@@ -67,4 +67,5 @@ def run(env_id="CartPole-v0"):
         ppo.interact()
         if ppo.n_episodes >= EPISODES_BEFORE_TRAIN:
             ppo.train()
-        
+        if ppo.episode_done and ((ppo.n_episodes+1)%EVAL_INTERVAL == 0):
+            re
