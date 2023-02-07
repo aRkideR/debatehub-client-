@@ -69,4 +69,5 @@ def run(env_id="CartPole-v0"):
             ppo.train()
         if ppo.episode_done and ((ppo.n_episodes+1)%EVAL_INTERVAL == 0):
             rewards, _ = ppo.evaluation(env_eval, EVAL_EPISODES)
-            rewards_mu, rew
+            rewards_mu, rewards_std = agg_double_list(rewards)
+            print("Episode %d, Average Reward %.2f" %
