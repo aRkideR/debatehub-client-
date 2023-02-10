@@ -74,4 +74,6 @@ def run(env_id="CartPole-v0"):
             episodes.append(ppo.n_episodes+1)
             eval_rewards.append(rewards_mu)
 
-    episodes = np.arr
+    episodes = np.array(episodes)
+    eval_rewards = np.array(eval_rewards)
+    np.savet
