@@ -72,4 +72,6 @@ def run(env_id="CartPole-v0"):
             rewards_mu, rewards_std = agg_double_list(rewards)
             print("Episode %d, Average Reward %.2f" % (ppo.n_episodes+1, rewards_mu))
             episodes.append(ppo.n_episodes+1)
- 
+            eval_rewards.append(rewards_mu)
+
+    episodes = np.arr
