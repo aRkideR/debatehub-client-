@@ -77,4 +77,7 @@ def run(env_id="CartPole-v0"):
     episodes = np.array(episodes)
     eval_rewards = np.array(eval_rewards)
     np.savetxt("./output/%s_ppo_episodes.txt"%env_id, episodes)
-    np.savetxt("./output/%s_ppo_
+    np.savetxt("./output/%s_ppo_eval_rewards.txt"%env_id, eval_rewards)
+
+    plt.figure()
+   
