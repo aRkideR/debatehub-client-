@@ -80,4 +80,6 @@ def run(env_id="CartPole-v0"):
     np.savetxt("./output/%s_ppo_eval_rewards.txt"%env_id, eval_rewards)
 
     plt.figure()
-   
+    plt.plot(episodes, eval_rewards)
+    plt.title("%s" % env_id)
+    plt.xlabe
