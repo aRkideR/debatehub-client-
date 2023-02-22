@@ -85,4 +85,7 @@ def run(env_id="CartPole-v0"):
     plt.xlabel("Episode")
     plt.ylabel("Average Reward")
     plt.legend(["PPO"])
-    plt.save
+    plt.savefig("./output/%s_ppo.png"%env_id)
+
+
+if __name__ == "__main__":
